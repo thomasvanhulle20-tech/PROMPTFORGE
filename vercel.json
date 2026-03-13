@@ -1,6 +1,11 @@
 {
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" }
-  ],
-  "public": "public"
+  "functions": {
+    "generate.js": {
+      "runtime": "@vercel/node@3"
+    }
+  },
+  "routes": [
+    { "src": "/api/generate", "dest": "/generate.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
