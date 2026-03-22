@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT vs Claude vs Gemini vs Grok (2026) : Le Comparatif Définitif — PromptFlow</title>
+  <meta name="description" content="On a testé ChatGPT, Claude, Gemini et Grok pendant 3 mois. Voici le comparatif honnête en 2026 : qualité, créativité, prix, et pour quel usage chaque IA excelle vraiment." />
+  <meta name="keywords" content="ChatGPT vs Claude vs Gemini vs Grok, meilleure IA 2026, comparatif IA, quelle IA choisir, Claude Anthropic, ChatGPT OpenAI, Gemini Google, Grok xAI" />
+  <link rel="canonical" href="https://promptflowfr.vercel.app/chatgpt-vs-claude-vs-gemini-vs-grok.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3416521083881352" crossorigin="anonymous"></script>
+  <style>
+    :root{--bg:#080808;--gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:rgba(201,168,76,0.12);--white:#f5f0e8;--muted:rgba(245,240,232,0.4);--border:rgba(201,168,76,0.15);--card:rgba(255,255,255,0.03)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;font-size:16px;line-height:1.8;overflow-x:hidden}
+    body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.35}
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:18px 48px;background:rgba(8,8,8,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold);text-decoration:none}
+    .logo em{font-style:italic;font-weight:300}
+    .nav-cta{background:var(--gold);color:#080808;padding:10px 24px;border-radius:2px;font-weight:600;font-size:13px;text-decoration:none;transition:all 0.2s}
+    .nav-cta:hover{background:var(--gold-light)}
+    .ad-slot{width:100%;max-width:728px;height:90px;margin:0 auto;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(201,168,76,0.15);color:rgba(201,168,76,0.15);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase}
+    .ad-wrap{padding:12px 48px}
+    .hero{padding:140px 48px 60px;max-width:900px;margin:0 auto}
+    .hero-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:block}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5.5vw,60px);font-weight:300;line-height:1.1;margin-bottom:24px}
+    .hero h1 em{font-style:italic;color:var(--gold)}
+    .hero-meta{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:40px}
+    .hero-intro{font-size:18px;color:rgba(245,240,232,0.75);font-weight:300;line-height:1.8;max-width:700px;border-left:2px solid var(--gold);padding-left:24px}
+    .content{max-width:900px;margin:0 auto;padding:0 48px 80px}
+    h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,40px);font-weight:300;line-height:1.2;margin:64px 0 20px;padding-left:20px;border-left:3px solid var(--gold)}
+    h2 em{font-style:italic;color:var(--gold)}
+    h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin:28px 0 12px}
+    p{color:rgba(245,240,232,0.75);margin-bottom:20px;font-weight:300}
+    strong{color:var(--white);font-weight:500}
+
+    /* AI CARDS */
+    .ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin:40px 0}
+    .ai-card{padding:36px;position:relative;border:1px solid var(--border);transition:all 0.3s}
+    .ai-card:hover{border-color:rgba(201,168,76,0.3)}
+    .ai-card.chatgpt{background:linear-gradient(135deg,rgba(16,163,127,0.08),var(--card))}
+    .ai-card.claude{background:linear-gradient(135deg,rgba(201,168,76,0.08),var(--card))}
+    .ai-card.gemini{background:linear-gradient(135deg,rgba(66,133,244,0.08),var(--card))}
+    .ai-card.grok{background:linear-gradient(135deg,rgba(200,200,200,0.08),var(--card))}
+    .ai-logo{font-size:40px;margin-bottom:16px}
+    .ai-card h3{margin-top:0;font-size:28px}
+    .ai-made-by{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.1em;margin-bottom:16px}
+    .ai-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+    .ai-tags{display:flex;flex-wrap:wrap;gap:8px}
+    .ai-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;padding:4px 10px;border:1px solid var(--border);color:var(--muted)}
+    .ai-tag.good{border-color:rgba(80,200,120,0.4);color:rgba(80,200,120,0.8)}
+    .ai-tag.bad{border-color:rgba(255,100,100,0.4);color:rgba(255,100,100,0.8)}
+
+    /* COMPARISON TABLE */
+    .comp-table{width:100%;border-collapse:collapse;margin:40px 0;font-size:14px}
+    .comp-table th{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:14px 16px;text-align:center;border-bottom:1px solid var(--border)}
+    .comp-table th:first-child{text-align:left;color:var(--gold)}
+    .comp-table th.chatgpt{color:rgba(16,163,127,0.9)}
+    .comp-table th.claude{color:var(--gold)}
+    .comp-table th.gemini{color:rgba(66,133,244,0.9)}
+    .comp-table th.grok{color:rgba(200,200,200,0.8)}
+    .comp-table td{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--muted);text-align:center}
+    .comp-table td:first-child{text-align:left;color:var(--white);font-weight:400}
+    .comp-table tr:hover td{background:var(--gold-dim)}
+    .score{font-weight:600}
+    .s5{color:#6bde8a}.s4{color:#a8d87a}.s3{color:var(--gold)}.s2{color:#e8a060}.s1{color:#e86060}
+    .winner-badge{display:inline-block;background:var(--gold);color:#080808;font-size:9px;font-weight:700;padding:2px 6px;font-family:'DM Mono',monospace;letter-spacing:0.1em;margin-left:6px;vertical-align:middle}
+
+    /* VERDICT CARDS */
+    .verdict-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin:40px 0}
+    .verdict-card{padding:32px;background:var(--card);border:1px solid var(--border)}
+    .verdict-icon{font-size:28px;margin-bottom:12px}
+    .verdict-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:8px}
+    .verdict-desc{font-size:13px;color:var(--muted);line-height:1.6}
+    .verdict-winner{font-family:'DM Mono',monospace;font-size:12px;color:var(--gold);margin-top:12px;letter-spacing:0.05em}
+
+    /* PROMPT EXAMPLE */
+    .prompt-box{background:rgba(0,0,0,0.4);border:1px solid var(--border);padding:24px;margin:24px 0}
+    .prompt-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
+    .prompt-text{font-family:'DM Mono',monospace;font-size:13px;color:rgba(245,240,232,0.7);line-height:1.7}
+    .prompt-result{margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+    .prompt-result-label{font-size:11px;color:var(--muted);margin-bottom:8px;font-family:'DM Mono',monospace;letter-spacing:0.1em;text-transform:uppercase}
+    .prompt-result p{font-size:14px;color:rgba(245,240,232,0.6);margin:4px 0;font-style:italic}
+
+    /* HIGHLIGHT */
+    .highlight-box{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);padding:24px 28px;margin:32px 0}
+    .highlight-box p{margin:0;color:rgba(245,240,232,0.8)}
+
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.25);padding:48px;text-align:center;margin:48px 0}
+    .cta-box h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:12px}
+    .cta-box h3 em{font-style:italic;color:var(--gold)}
+    .cta-box p{color:var(--muted);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+    .btn-gold{display:inline-block;background:var(--gold);color:#080808;padding:16px 36px;font-weight:600;font-size:14px;text-decoration:none;letter-spacing:0.05em;transition:all 0.2s}
+    .btn-gold:hover{background:var(--gold-light)}
+
+    footer{border-top:1px solid var(--border);padding:48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--gold)}
+    .footer-links{display:flex;gap:32px;flex-wrap:wrap}
+    .footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color 0.2s}
+    .footer-links a:hover{color:var(--white)}
+    .footer-copy{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted)}
+    @media(max-width:768px){nav{padding:16px 24px}.hero{padding:100px 24px 40px}.content{padding:0 24px 60px}.ai-grid,.verdict-grid{grid-template-columns:1fr}.comp-table{font-size:12px}.comp-table td,.comp-table th{padding:10px 8px}.ad-wrap{padding:12px 24px}.cta-box{padding:32px 24px}footer{padding:32px 24px;flex-direction:column;text-align:center}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Prompt<em>Flow</em></a>
+  <a href="/#packs" class="nav-cta">Voir les packs →</a>
+</nav>
+
+<div class="ad-wrap" style="padding-top:80px;">
+  <div class="ad-slot">Publicité — AdSense</div>
+</div>
+
+<header class="hero">
+  <span class="hero-tag">✦ Comparatif · Mars 2026</span>
+  <h1>ChatGPT vs Claude vs Gemini vs Grok :<br><em>Le comparatif définitif</em></h1>
+  <p class="hero-meta">Par l'équipe PromptFlow · 15 min de lecture · Testé pendant 3 mois</p>
+  <p class="hero-intro">4 IA. Des milliers de tests. Un seul gagnant selon ton usage. On a tout testé sans filtre — rédaction, créativité, code, prompts, prix — pour que tu n'aies plus à choisir à l'aveugle.</p>
+</header>
+
+<main class="content">
+
+  <div class="highlight-box">
+    <p>⚠️ <strong>Spoiler :</strong> Il n'y a pas une seule "meilleure IA". Chaque outil excelle dans un domaine précis. Ce guide te dit laquelle utiliser selon ce que TU veux faire.</p>
+  </div>
+
+  <!-- LES 4 IA -->
+  <h2>Les 4 <em>concurrents</em></h2>
+
+  <div class="ai-grid">
+    <div class="ai-card chatgpt">
+      <div class="ai-logo">🟢</div>
+      <h3>ChatGPT</h3>
+      <div class="ai-made-by">Par OpenAI · GPT-4o</div>
+      <p class="ai-desc">Le pionnier. Lancé en novembre 2022, il a révolutionné l'IA grand public. Aujourd'hui encore le plus utilisé dans le monde avec plus de 200 millions d'utilisateurs actifs.</p>
+      <div class="ai-tags">
+        <span class="ai-tag good">Polyvalent</span>
+        <span class="ai-tag good">Plugins & GPTs</span>
+        <span class="ai-tag good">Images (DALL-E)</span>
+        <span class="ai-tag bad">Parfois trop prudent</span>
+      </div>
+    </div>
+
+    <div class="ai-card claude">
+      <div class="ai-logo">🟡</div>
+      <h3>Claude</h3>
+      <div class="ai-made-by">Par Anthropic · Claude 3.5 Sonnet</div>
+      <p class="ai-desc">L'IA la plus "humaine". Créé par d'anciens chercheurs d'OpenAI, Claude se distingue par sa capacité à raisonner longuement, écrire avec style et comprendre des nuances complexes.</p>
+      <div class="ai-tags">
+        <span class="ai-tag good">Rédaction créative</span>
+        <span class="ai-tag good">Raisonnement long</span>
+        <span class="ai-tag good">Très honnête</span>
+        <span class="ai-tag bad">Pas d'images</span>
+      </div>
+    </div>
+
+    <div class="ai-card gemini">
+      <div class="ai-logo">🔵</div>
+      <h3>Gemini</h3>
+      <div class="ai-made-by">Par Google · Gemini 1.5 Pro</div>
+      <p class="ai-desc">L'IA de Google, intégrée à tout l'écosystème (Gmail, Docs, YouTube). Son atout majeur : la recherche en temps réel et la gestion de documents très longs.</p>
+      <div class="ai-tags">
+        <span class="ai-tag good">Infos en temps réel</span>
+        <span class="ai-tag good">Intégration Google</span>
+        <span class="ai-tag good">Contexte immense</span>
+        <span class="ai-tag bad">Moins créatif</span>
+      </div>
+    </div>
+
+    <div class="ai-card grok">
+      <div class="ai-logo">⚫</div>
+      <h3>Grok</h3>
+      <div class="ai-made-by">Par xAI (Elon Musk) · Grok-2</div>
+      <p class="ai-desc">L'IA rebelle. Créé par xAI avec moins de restrictions que ses concurrents. Intégré à X (Twitter), il a accès aux données en temps réel du réseau social et assume un ton plus direct.</p>
+      <div class="ai-tags">
+        <span class="ai-tag good">Données X/Twitter</span>
+        <span class="ai-tag good">Moins censuré</span>
+        <span class="ai-tag good">Humour</span>
+        <span class="ai-tag bad">Moins fiable</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-wrap" style="padding:32px 0;">
+    <div class="ad-slot">Publicité — Contenu Central</div>
+  </div>
+
+  <!-- TABLEAU COMPARATIF -->
+  <h2>Le <em>tableau comparatif</em> complet</h2>
+  <p>Chaque critère noté sur 5 après des centaines de tests réels.</p>
+
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Critère</th>
+        <th class="chatgpt">ChatGPT</th>
+        <th class="claude">Claude</th>
+        <th class="gemini">Gemini</th>
+        <th class="grok">Grok</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rédaction créative</td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s3">3/5</span></td>
+        <td><span class="score s3">3/5</span></td>
+      </tr>
+      <tr>
+        <td>Raisonnement & logique</td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s3">3/5</span></td>
+      </tr>
+      <tr>
+        <td>Code & programmation</td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s3">3/5</span></td>
+      </tr>
+      <tr>
+        <td>Infos en temps réel</td>
+        <td><span class="score s3">3/5</span></td>
+        <td><span class="score s2">2/5</span></td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s4">4/5</span></td>
+      </tr>
+      <tr>
+        <td>Prompts marketing</td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s3">3/5</span></td>
+        <td><span class="score s3">3/5</span></td>
+      </tr>
+      <tr>
+        <td>Contenu TikTok/viral</td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s3">3/5</span></td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+      </tr>
+      <tr>
+        <td>Analyse de documents</td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s2">2/5</span></td>
+      </tr>
+      <tr>
+        <td>Facilité d'utilisation</td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s3">3/5</span></td>
+      </tr>
+      <tr>
+        <td>Version gratuite</td>
+        <td><span class="score s4">4/5</span></td>
+        <td><span class="score s3">3/5</span></td>
+        <td><span class="score s5">5/5</span> <span class="winner-badge">★</span></td>
+        <td><span class="score s3">3/5</span></td>
+      </tr>
+      <tr>
+        <td>Prix version Pro</td>
+        <td>20$/mois</td>
+        <td>20$/mois</td>
+        <td>22€/mois</td>
+        <td>Inclus X Premium</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- TEST PROMPTS -->
+  <h2>Le même prompt <em>testé sur les 4 IA</em></h2>
+  <p>On a soumis ce prompt identique aux 4 IA pour comparer leurs réponses :</p>
+
+  <div class="prompt-box">
+    <span class="prompt-label">✦ Prompt testé</span>
+    <div class="prompt-text">"Écris un hook TikTok ultra-accrocheur pour une vidéo sur les chats qui font des choses étranges. L'objectif est de capturer l'attention en 2 secondes."</div>
+
+    <div class="prompt-result">
+      <div class="prompt-result-label">🟢 ChatGPT</div>
+      <p>"Ton chat fait ça aussi ou c'est juste le mien qui est bizarre ?!" — Direct, efficace, universel. Note : 4/5</p>
+    </div>
+    <div class="prompt-result">
+      <div class="prompt-result-label">🟡 Claude</div>
+      <p>"J'ai filmé mon chat à 3h du matin. Ce que j'ai vu va me hanter pour toujours." — Créatif, mystérieux, parfait pour TikTok. Note : 5/5</p>
+    </div>
+    <div class="prompt-result">
+      <div class="prompt-result-label">🔵 Gemini</div>
+      <p>"Les chats font des choses étranges. Voici pourquoi selon la science." — Informatif mais peu viral. Note : 3/5</p>
+    </div>
+    <div class="prompt-result">
+      <div class="prompt-result-label">⚫ Grok</div>
+      <p>"Mon chat complote quelque chose. Et franchement il a raison." — Drôle, inattendu, très TikTok. Note : 4/5</p>
+    </div>
+  </div>
+
+  <!-- VERDICTS -->
+  <h2>Quelle IA <em>pour quel usage ?</em></h2>
+
+  <div class="verdict-grid">
+    <div class="verdict-card">
+      <div class="verdict-icon">✍️</div>
+      <div class="verdict-title">Pour écrire & créer du contenu</div>
+      <div class="verdict-desc">Rédaction d'articles, scripts, ebooks, posts réseaux sociaux, emails de vente. La qualité stylistique et la nuance font la différence.</div>
+      <div class="verdict-winner">🟡 Gagnant : Claude</div>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-icon">💻</div>
+      <div class="verdict-title">Pour coder & automatiser</div>
+      <div class="verdict-desc">Écriture de code, debugging, création d'outils, automatisation de tâches répétitives avec des scripts.</div>
+      <div class="verdict-winner">🟢 Gagnant : ChatGPT</div>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-icon">📰</div>
+      <div class="verdict-title">Pour l'actualité & la recherche</div>
+      <div class="verdict-desc">Infos en temps réel, veille concurrentielle, résumés d'articles récents, faits vérifiés du jour.</div>
+      <div class="verdict-winner">🔵 Gagnant : Gemini</div>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-icon">🎭</div>
+      <div class="verdict-title">Pour le contenu viral & l'humour</div>
+      <div class="verdict-desc">Hooks TikTok, tweets percutants, contenu décalé, mèmes, tendances X/Twitter en temps réel.</div>
+      <div class="verdict-winner">⚫ Gagnant : Grok</div>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-icon">📊</div>
+      <div class="verdict-title">Pour analyser de longs documents</div>
+      <div class="verdict-desc">Résumés de rapports, analyse de contrats, extraction d'infos dans des PDFs très longs.</div>
+      <div class="verdict-winner">🟡 Gagnant : Claude</div>
+    </div>
+    <div class="verdict-card">
+      <div class="verdict-icon">🚀</div>
+      <div class="verdict-title">Pour tout faire sans payer</div>
+      <div class="verdict-desc">Si tu veux un outil gratuit complet pour commencer sans débourser un centime.</div>
+      <div class="verdict-winner">🔵 Gagnant : Gemini</div>
+    </div>
+  </div>
+
+  <!-- NOTRE RECOMMANDATION -->
+  <h2>Notre <em>recommandation finale</em></h2>
+
+  <div class="highlight-box">
+    <p><strong>Si tu ne devais en choisir qu'une seule</strong> → <strong>ChatGPT</strong>. C'est le plus polyvalent, le mieux supporté, avec le plus grand écosystème de plugins et d'intégrations. La version gratuite est solide et la version payante vaut largement ses 20$/mois.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>Si tu crées beaucoup de contenu écrit</strong> → <strong>Claude</strong>. La qualité de rédaction est supérieure à tous les autres. Pour des articles de blog, des ebooks, ou des scripts — Claude produit du texte qui semble vraiment humain.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>La combinaison gagnante en 2026</strong> → Utilise <strong>ChatGPT pour le quotidien</strong>, <strong>Claude pour les textes importants</strong>, et <strong>Gemini quand tu as besoin d'infos récentes</strong>. Ce sont les trois qui se complètent le mieux.</p>
+  </div>
+
+  <h2>Le secret que <em>personne ne dit</em></h2>
+
+  <p>La vraie différence entre quelqu'un qui obtient des résultats médiocres et quelqu'un qui obtient des résultats extraordinaires avec ces IA ? <strong>Ce n'est pas l'outil. C'est le prompt.</strong></p>
+
+  <p>Un mauvais prompt dans Claude donne un résultat banal. Un excellent prompt dans la version gratuite de ChatGPT peut produire du contenu exceptionnel. Les meilleurs utilisateurs d'IA ne passent pas leur temps à changer d'outil — ils maîtrisent l'art du prompt.</p>
+
+  <p>C'est exactement pour ça qu'on a créé PromptFlow : des centaines de prompts testés et optimisés pour chaque cas d'usage, compatibles avec toutes ces IA.</p>
+
+  <div class="cta-box">
+    <h3>Des prompts qui fonctionnent<br><em>sur toutes les IA</em></h3>
+    <p>Nos packs sont testés sur ChatGPT, Claude, Gemini et Grok. Tu copies, tu colles, ça marche — peu importe l'IA que tu utilises.</p>
+    <a href="/#packs" class="btn-gold">Voir les packs de prompts →</a>
+  </div>
+
+  <div class="ad-wrap" style="padding:0 0 32px;">
+    <div class="ad-slot">Publicité — Bannière Basse</div>
+  </div>
+
+  <h2>En <em>résumé</em></h2>
+
+  <p><strong>ChatGPT</strong> — Le meilleur choix par défaut. Polyvalent, fiable, avec le plus grand écosystème.</p>
+  <p><strong>Claude</strong> — Le meilleur pour écrire. Qualité rédactionnelle supérieure, raisonnement profond.</p>
+  <p><strong>Gemini</strong> — Le meilleur pour rester informé. Données en temps réel, intégré à Google.</p>
+  <p><strong>Grok</strong> — Le meilleur pour le contenu viral. Accès à X/Twitter, moins de restrictions, humour.</p>
+
+  <p style="margin-top:32px;">Peu importe celle que tu choisis — ce qui fait vraiment la différence, c'est comment tu lui parles. Et ça, c'est une compétence qui s'apprend. 💪</p>
+
+</main>
+
+<footer>
+  <div class="footer-logo">PromptFlow</div>
+  <div class="footer-links">
+    <a href="/">Accueil</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/gagner-argent-chatgpt.html">Gagner de l'argent</a>
+    <a href="/cgv.html">CGV</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 PromptFlow · Tous droits réservés</div>
+</footer>
+
+</body>
+</html>
