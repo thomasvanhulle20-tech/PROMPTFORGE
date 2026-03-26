@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — FlowPrompt</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080808;--gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:rgba(201,168,76,0.12);--white:#f5f0e8;--muted:rgba(245,240,232,0.4);--border:rgba(201,168,76,0.15);--card:rgba(255,255,255,0.03)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--white);line-height:1.8}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 48px;background:rgba(8,8,8,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold);text-decoration:none}
+  .logo em{font-style:italic;font-weight:300}
+  .container{max-width:640px;margin:0 auto;padding:120px 48px 80px}
+  h1{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;margin-bottom:8px}
+  .subtitle{font-size:16px;color:var(--muted);font-weight:300;margin-bottom:48px}
+  .info-card{background:var(--card);border:1px solid var(--border);padding:24px 28px;margin-bottom:12px}
+  .info-card h3{font-size:14px;font-weight:500;margin-bottom:6px}
+  .info-card p{font-size:14px;color:var(--muted);font-weight:300}
+  .form-box{background:var(--card);border:1px solid var(--border);padding:40px;margin-top:32px}
+  .form-box h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:28px}
+  .form-group{margin-bottom:20px}
+  label{display:block;font-size:11px;font-weight:500;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;font-family:'Outfit',monospace}
+  input,textarea,select{width:100%;background:rgba(0,0,0,0.4);border:1px solid var(--border);color:var(--white);font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;padding:14px 18px;outline:none;transition:border 0.2s}
+  input:focus,textarea:focus,select:focus{border-color:rgba(201,168,76,0.5)}
+  textarea{height:140px;resize:vertical}
+  select option{background:#111}
+  .btn{width:100%;padding:16px;background:var(--gold);color:#080808;border:none;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s;margin-top:8px}
+  .btn:hover{background:var(--gold-light)}
+  .success{display:none;background:var(--gold-dim);border:1px solid rgba(201,168,76,0.3);padding:16px;text-align:center;color:var(--gold);font-size:14px;margin-top:16px}
+  footer{border-top:1px solid var(--border);padding:32px 48px;text-align:center;font-size:13px;color:var(--muted)}
+  footer a{color:var(--gold);text-decoration:none}
+  @media(max-width:768px){nav{padding:16px 24px}.container{padding:100px 24px 60px}.form-box{padding:28px 24px}footer{padding:24px}}
+</style>
+</head>
+<body>
+<nav><a href="/" class="logo">Flow<em>Prompt</em></a></nav>
+<div class="container">
+  <h1>Contact</h1>
+  <p class="subtitle">Une question sur un pack, un problème de téléchargement ou une demande de remboursement ? On te répond sous 48h.</p>
+
+  <div class="info-card">
+    <h3>⏱️ Délai de réponse</h3>
+    <p>Nous répondons à tous les messages sous 48h, du lundi au vendredi.</p>
+  </div>
+  <div class="info-card">
+    <h3>💸 Remboursement</h3>
+    <p>Pas satisfait ? Envoie-nous un message dans les 7 jours suivant ton achat et on te rembourse sans condition.</p>
+  </div>
+
+  <div class="form-box">
+    <h2>Envoie-nous un message</h2>
+    <div class="form-group">
+      <label>Ton prénom</label>
+      <input type="text" id="name" placeholder="Ex : Thomas">
+    </div>
+    <div class="form-group">
+      <label>Ton email</label>
+      <input type="email" id="email" placeholder="ton@email.com">
+    </div>
+    <div class="form-group">
+      <label>Sujet</label>
+      <select id="subject">
+        <option value="">Choisir un sujet...</option>
+        <option>Question sur un pack</option>
+        <option>Problème de téléchargement</option>
+        <option>Demande de remboursement</option>
+        <option>Autre</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea id="message" placeholder="Décris ta demande..."></textarea>
+    </div>
+    <button class="btn" onclick="handleSubmit()">Envoyer le message →</button>
+    <div class="success" id="success">✓ Message envoyé ! On te répond sous 48h.</div>
+  </div>
+</div>
+<footer>© 2026 FlowPrompt · <a href="/cgv.html">CGV</a> · <a href="/mentions-legales.html">Mentions légales</a></footer>
+<script>
+function handleSubmit(){
+  var name=document.getElementById('name').value;
+  var email=document.getElementById('email').value;
+  var subject=document.getElementById('subject').value;
+  var message=document.getElementById('message').value;
+  if(!name||!email||!subject||!message){alert('Merci de remplir tous les champs.');return;}
+  document.getElementById('success').style.display='block';
+  document.getElementById('name').value='';
+  document.getElementById('email').value='';
+  document.getElementById('subject').value='';
+  document.getElementById('message').value='';
+}
+</script>
+</body>
+</html>
