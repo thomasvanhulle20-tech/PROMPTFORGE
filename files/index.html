@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowPrompt — Apprends à utiliser l'IA pour créer des revenus en ligne</title>
+  <meta name="description" content="FlowPrompt est votre ressource complète pour maîtriser les prompts IA. Guides gratuits, générateur de prompts, conseils pratiques et ressources pour gagner de l'argent avec ChatGPT, Claude et Gemini." />
+  <meta name="keywords" content="prompts IA, apprendre ChatGPT, guides IA gratuits, gagner argent IA, prompts ChatGPT français, tutoriels intelligence artificielle" />
+  <link rel="canonical" href="https://flowprompt.fr/" />
+  <meta property="og:title" content="FlowPrompt — Maîtrise l'IA et génère des revenus" />
+  <meta property="og:description" content="Guides gratuits, générateur de prompts et ressources pour apprendre à utiliser l'IA et générer des revenus en ligne." />
+  <meta property="og:url" content="https://flowprompt.fr/" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FlowPrompt",
+    "url": "https://flowprompt.fr",
+    "description": "Ressource complète pour maîtriser les prompts IA et générer des revenus en ligne",
+    "publisher": {"@type": "Organization", "name": "FlowPrompt"},
+    "potentialAction": {"@type": "SearchAction", "target": "https://flowprompt.fr/?q={search_term_string}"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3416521083881352" crossorigin="anonymous"></script>
+  <style>
+    :root{--bg:#080808;--gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:rgba(201,168,76,0.12);--white:#f5f0e8;--muted:rgba(245,240,232,0.4);--border:rgba(201,168,76,0.15);--card:rgba(255,255,255,0.03)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;font-size:16px;line-height:1.8;overflow-x:hidden}
+    body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.35}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:18px 48px;background:rgba(8,8,8,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:0.05em}
+    .logo em{font-style:italic;font-weight:300}
+    .nav-links{display:flex;gap:28px;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color 0.2s}
+    .nav-links a:hover{color:var(--white)}
+    .nav-cta{background:var(--gold)!important;color:#080808!important;padding:9px 22px!important;border-radius:2px!important;font-weight:600!important;font-size:13px!important}
+
+    /* HERO */
+    .hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:140px 24px 80px;position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(201,168,76,0.06) 0%,transparent 70%);pointer-events:none}
+    .hero-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:block;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,8vw,96px);font-weight:300;line-height:1.05;margin-bottom:24px;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards}
+    .hero h1 em{font-style:italic;color:var(--gold)}
+    .hero-sub{font-size:17px;color:var(--muted);max-width:580px;font-weight:300;margin-bottom:16px;line-height:1.8;opacity:0;animation:fadeUp 0.8s ease 0.6s forwards}
+    .hero-author{font-family:'DM Mono',monospace;font-size:12px;color:rgba(201,168,76,0.6);margin-bottom:40px;opacity:0;animation:fadeUp 0.8s ease 0.7s forwards}
+    .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp 0.8s ease 0.8s forwards}
+    .btn-primary{background:var(--gold);color:#080808;padding:16px 36px;border-radius:2px;font-weight:600;font-size:14px;text-decoration:none;transition:all 0.2s;display:inline-block}
+    .btn-primary:hover{background:var(--gold-light)}
+    .btn-secondary{background:transparent;color:var(--white);padding:16px 32px;border-radius:2px;border:1px solid var(--border);font-size:14px;text-decoration:none;transition:all 0.2s;display:inline-block}
+    .btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+    .hero-stats{display:flex;gap:56px;justify-content:center;margin-top:72px;opacity:0;animation:fadeUp 0.8s ease 1s forwards;padding-top:40px;border-top:1px solid var(--border);max-width:500px;margin-left:auto;margin-right:auto}
+    .stat-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:var(--gold);line-height:1}
+    .stat-label{font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;font-family:'DM Mono',monospace}
+
+    /* SECTIONS */
+    section{padding:96px 48px;max-width:1200px;margin:0 auto}
+    .section-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:block}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,56px);font-weight:300;line-height:1.1;margin-bottom:16px}
+    .section-title em{font-style:italic;color:var(--gold)}
+    .section-sub{font-size:16px;color:var(--muted);font-weight:300;max-width:560px;line-height:1.8}
+    .divider{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+    .ad-slot{width:100%;max-width:728px;height:90px;margin:0 auto;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(201,168,76,0.18);color:rgba(201,168,76,0.2);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase}
+    .ad-wrap{padding:10px 48px}
+
+    /* WHAT WE TEACH */
+    .learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
+    .learn-card{background:var(--card);border:1px solid var(--border);padding:36px;transition:border-color 0.3s}
+    .learn-card:hover{border-color:rgba(201,168,76,0.3)}
+    .learn-icon{font-size:36px;margin-bottom:20px}
+    .learn-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:12px}
+    .learn-desc{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:16px}
+    .learn-link{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--gold);text-decoration:none}
+    .learn-link:hover{text-decoration:underline}
+
+    /* HISTOIRE */
+    .story-grid{display:grid;grid-template-columns:200px 1fr;gap:56px;align-items:start;margin-top:56px}
+    .story-avatar{text-align:center}
+    .story-avatar-img{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,rgba(201,168,76,0.25),rgba(201,168,76,0.05));border:2px solid rgba(201,168,76,0.35);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:72px}
+    .story-avatar-name{font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;margin-top:16px}
+    .story-avatar-role{font-size:13px;color:var(--muted);margin-top:4px}
+    .story-content p{font-size:16px;color:rgba(245,240,232,0.78);font-weight:300;line-height:1.9;margin-bottom:20px}
+    .story-content strong{color:var(--white);font-weight:500}
+    .story-highlight{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);padding:20px 24px;margin:24px 0}
+    .story-highlight p{margin:0;font-style:italic;color:rgba(245,240,232,0.85)}
+
+    /* GENERATOR */
+    .generator-wrap{background:var(--card);border:1px solid var(--border);padding:48px;margin-top:56px}
+    .gen-intro{font-size:15px;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:32px;max-width:640px}
+    .gen-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+    .gen-field label{display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .gen-field textarea,.gen-field select{width:100%;background:rgba(0,0,0,0.5);border:1px solid var(--border);color:var(--white);font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;padding:14px 16px;outline:none;resize:none;transition:border 0.2s}
+    .gen-field textarea{height:96px}
+    .gen-field textarea:focus,.gen-field select:focus{border-color:rgba(201,168,76,0.5)}
+    .gen-field select option{background:#111}
+    .gen-btn{width:100%;padding:17px;background:var(--gold);color:#080808;border:none;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s}
+    .gen-btn:hover{background:var(--gold-light)}
+    .gen-btn:disabled{opacity:0.5;cursor:not-allowed}
+    .gen-result{margin-top:28px;display:none}
+    .gen-result-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+    .gen-result-text{background:rgba(0,0,0,0.5);border:1px solid var(--border);padding:22px;font-size:14px;color:var(--white);line-height:1.8;font-weight:300;white-space:pre-wrap}
+    .gen-copy{margin-top:10px;background:transparent;border:1px solid var(--border);color:var(--muted);padding:9px 18px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;cursor:pointer;transition:all 0.2s}
+    .gen-copy:hover{border-color:var(--gold);color:var(--gold)}
+    .gen-loading{display:none;text-align:center;padding:28px;color:var(--muted);font-family:'DM Mono',monospace;font-size:12px}
+    .gen-note{margin-top:20px;padding:16px 20px;background:var(--gold-dim);border-left:2px solid var(--gold);font-size:14px;color:var(--muted);display:none}
+    .gen-note a{color:var(--gold);text-decoration:none;font-weight:500}
+
+    /* BLOG */
+    .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:56px}
+    .blog-card{background:var(--card);border:1px solid var(--border);text-decoration:none;color:inherit;transition:border-color 0.3s;display:block}
+    .blog-card:hover{border-color:rgba(201,168,76,0.4)}
+    .blog-card-img{background:linear-gradient(135deg,var(--gold-dim),rgba(201,168,76,0.02));display:flex;align-items:center;justify-content:center;font-size:56px;height:160px;border-bottom:1px solid var(--border)}
+    .blog-card-body{padding:28px}
+    .blog-card-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
+    .blog-card-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;line-height:1.2;margin-bottom:10px}
+    .blog-card-excerpt{font-size:13px;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:16px}
+    .blog-card-link{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;color:var(--gold)}
+
+    /* GUIDE SECTION */
+    .guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:56px}
+    .guide-card{background:var(--card);border:1px solid var(--border);padding:36px}
+    .guide-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;color:rgba(201,168,76,0.15);line-height:1;margin-bottom:16px}
+    .guide-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold);margin-bottom:12px}
+    .guide-desc{font-size:14px;color:var(--muted);line-height:1.8}
+
+    /* TÉMOIGNAGES */
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
+    .testi{padding:32px;background:var(--card);border:1px solid var(--border)}
+    .stars{color:var(--gold);font-size:12px;letter-spacing:3px;margin-bottom:14px}
+    .testi-text{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;font-weight:300;line-height:1.7;margin-bottom:18px}
+    .testi-author{display:flex;align-items:center;gap:10px}
+    .testi-avatar{width:34px;height:34px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--gold);font-family:'DM Mono',monospace;flex-shrink:0}
+    .testi-name{font-size:13px;font-weight:500}
+    .testi-role{font-size:12px;color:var(--muted)}
+
+    /* PACKS */
+    .packs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
+    .pack-card{padding:36px;background:var(--card);border:1px solid var(--border);position:relative;transition:all 0.3s;display:flex;flex-direction:column}
+    .pack-card:hover{background:rgba(201,168,76,0.04);border-color:rgba(201,168,76,0.3)}
+    .pack-card.featured{background:rgba(201,168,76,0.07);border-color:rgba(201,168,76,0.3)}
+    .pack-badge{position:absolute;top:-1px;right:28px;background:var(--gold);color:#080808;font-size:10px;font-weight:600;padding:4px 10px;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Mono',monospace}
+    .pack-badge.red{background:#e05555}
+    .pack-icon{font-size:32px;margin-bottom:16px}
+    .pack-card h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin-bottom:10px}
+    .pack-card>p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:20px;flex:1}
+    .pack-features{list-style:none;margin-bottom:28px}
+    .pack-features li{font-size:13px;color:var(--muted);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:8px}
+    .pack-features li::before{content:'✦';color:var(--gold);font-size:9px;flex-shrink:0}
+    .pack-price{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:var(--gold);line-height:1}
+    .pack-price-label{font-size:11px;color:var(--muted);margin-bottom:20px;font-family:'DM Mono',monospace;margin-top:4px}
+    .pack-btn{display:block;text-align:center;background:transparent;border:1px solid var(--gold);color:var(--gold);padding:13px;font-size:13px;font-weight:500;text-decoration:none;transition:all 0.2s}
+    .pack-btn:hover,.pack-card.featured .pack-btn{background:var(--gold);color:#080808}
+
+    /* GARANTIE */
+    .garantie{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:2px}
+    .garantie-item{padding:18px 22px;background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.18);display:flex;align-items:center;gap:14px}
+    .garantie-icon{font-size:24px;flex-shrink:0}
+    .garantie-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+    .garantie-desc{font-size:12px;color:var(--muted);font-weight:300}
+
+    /* SIMULATEUR */
+    .sim-wrap{margin-top:56px;background:var(--card);border:1px solid var(--border);overflow:hidden}
+    .sim-header{padding:36px 48px;border-bottom:1px solid var(--border)}
+    .sim-header h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300}
+    .sim-header h3 em{font-style:italic;color:var(--gold)}
+    .sim-header p{font-size:14px;color:var(--muted);margin-top:8px;font-weight:300}
+    .sim-body{display:grid;grid-template-columns:1fr 1fr}
+    .sim-left{padding:40px 48px;border-right:1px solid var(--border)}
+    .sim-right{padding:40px 48px;background:rgba(201,168,76,0.02)}
+    .sim-slider{margin-bottom:32px}
+    .sim-slider-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+    .sim-slider-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)}
+    .sim-slider-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--gold)}
+    .sim-slider-unit{font-size:13px;color:var(--muted);margin-left:3px}
+    input[type=range]{width:100%;-webkit-appearance:none;height:2px;background:var(--border);outline:none;border-radius:2px}
+    input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--gold);border-radius:50%;cursor:pointer}
+    .sim-presets{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+    .sim-preset{padding:3px 10px;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:'DM Mono',monospace;font-size:10px;cursor:pointer;transition:all 0.2s}
+    .sim-preset:hover,.sim-preset.active{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+    .sim-result-main{margin-bottom:28px}
+    .sim-result-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .sim-amount .currency{font-size:28px;color:var(--gold);vertical-align:top;margin-top:6px;display:inline-block;font-family:'Cormorant Garamond',serif}
+    .sim-amount .value{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;color:var(--gold)}
+    .sim-breakdown{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:28px}
+    .sim-break-item{padding:14px;background:rgba(0,0,0,0.3);border:1px solid var(--border)}
+    .sim-break-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+    .sim-break-val{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--white)}
+    .sim-bar-wrap{margin-bottom:20px}
+    .sim-bar-label{display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:6px}
+    .sim-bar-track{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+    .sim-bar-fill{height:100%;background:linear-gradient(to right,var(--gold),var(--gold-light));border-radius:2px;transition:width 0.5s ease}
+    .sim-cta{width:100%;padding:15px;background:var(--gold);color:#080808;border:none;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;display:block;text-align:center;transition:all 0.2s}
+    .sim-cta:hover{background:var(--gold-light)}
+
+    /* FAQ */
+    .faq-list{margin-top:56px;border-top:1px solid var(--border)}
+    details.faq-item{border-bottom:1px solid var(--border)}
+    details.faq-item summary{list-style:none;color:var(--white);font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;padding:24px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:16px;transition:color 0.2s}
+    details.faq-item summary::-webkit-details-marker{display:none}
+    details.faq-item summary:hover{color:var(--gold)}
+    details.faq-item[open] summary{color:var(--gold)}
+    details.faq-item[open] .faq-icon{transform:rotate(45deg)}
+    .faq-icon{color:var(--gold);font-size:18px;flex-shrink:0;transition:transform 0.3s}
+    .faq-a{padding:0 0 20px;font-size:15px;color:var(--muted);font-weight:300;line-height:1.8;max-width:700px}
+
+    /* CTA */
+    .cta-banner{background:linear-gradient(135deg,rgba(201,168,76,0.09),rgba(201,168,76,0.02));border:1px solid rgba(201,168,76,0.22);padding:72px 48px;text-align:center;margin:0 48px 72px}
+    .cta-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,52px);font-weight:300;margin-bottom:18px}
+    .cta-banner h2 em{font-style:italic;color:var(--gold)}
+    .cta-banner p{color:var(--muted);font-size:16px;font-weight:300;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--gold)}
+    .footer-tagline{font-size:12px;color:var(--muted);margin-top:4px;font-weight:300}
+    .footer-links{display:flex;gap:28px;flex-wrap:wrap}
+    .footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color 0.2s}
+    .footer-links a:hover{color:var(--white)}
+    .footer-copy{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted)}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes pulse{0%,100%{opacity:0.3}50%{opacity:1}}
+
+    @media(max-width:900px){
+      nav{padding:14px 24px}.nav-links{display:none}
+      .hero{padding:130px 24px 60px}
+      section{padding:60px 24px}
+      .learn-grid,.guide-grid,.blog-grid,.testi-grid,.packs-grid{grid-template-columns:1fr}
+      .story-grid{grid-template-columns:1fr}
+      .sim-body{grid-template-columns:1fr}
+      .sim-left{border-right:none;border-bottom:1px solid var(--border);padding:28px 24px}
+      .sim-right{padding:28px 24px}
+      .sim-header{padding:28px 24px}
+      .generator-wrap{padding:28px 24px}
+      .garantie{grid-template-columns:1fr}
+      .cta-banner{margin:0 24px 56px;padding:48px 24px}
+      footer{padding:32px 24px;flex-direction:column;text-align:center}
+      .hero-stats{gap:32px}
+      .ad-wrap{padding:10px 24px}
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/" class="logo">Flow<em>Prompt</em></a>
+  <div class="nav-links">
+    <a href="#apprendre">Apprendre</a>
+    <a href="#generateur">Générateur gratuit</a>
+    <a href="#blog">Blog</a>
+    <a href="#packs">Les packs</a>
+    <a href="#faq">FAQ</a>
+    <a href="#packs" class="nav-cta">Voir les packs →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <span class="hero-tag">✦ Ressource gratuite · Guides · Outils · Conseils pratiques</span>
+  <h1>Maîtrise l'IA.<br><em>Génère des revenus.</em></h1>
+  <p class="hero-sub">FlowPrompt est la ressource francophone de référence pour apprendre à utiliser l'intelligence artificielle de façon concrète et profitable — avec des guides gratuits, un générateur de prompts et des conseils testés sur le terrain.</p>
+  <p class="hero-author">✦ Créé par un passionné d'IA · Contenu testé et vérifié · Mis à jour régulièrement</p>
+  <div class="hero-btns">
+    <a href="#apprendre" class="btn-primary">Commencer à apprendre →</a>
+    <a href="#generateur" class="btn-secondary">Tester le générateur gratuit</a>
+  </div>
+  <div class="hero-stats">
+    <div><div class="stat-num">8</div><div class="stat-label">Guides complets</div></div>
+    <div><div class="stat-num">400+</div><div class="stat-label">Prompts testés</div></div>
+    <div><div class="stat-num">1 200+</div><div class="stat-label">Lecteurs actifs</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CE QU'ON APPREND ICI -->
+<section id="apprendre">
+  <span class="section-tag">✦ Ce que tu vas apprendre ici</span>
+  <h2 class="section-title">L'intelligence artificielle<br><em>accessible à tous</em></h2>
+  <p class="section-sub">Pas de théorie inutile. Des guides pratiques, des exemples réels et des outils gratuits pour utiliser l'IA dès aujourd'hui — même si tu es débutant complet.</p>
+  <div class="learn-grid">
+    <div class="learn-card">
+      <div class="learn-icon">✍️</div>
+      <div class="learn-title">Rédiger avec l'IA</div>
+      <div class="learn-desc">Articles de blog, ebooks, descriptions produits, emails de vente — apprends à produire du contenu de qualité professionnelle en quelques minutes grâce aux bons prompts.</div>
+      <a href="/blog.html" class="learn-link">Lire le guide →</a>
+    </div>
+    <div class="learn-card">
+      <div class="learn-icon">💰</div>
+      <div class="learn-title">Générer des revenus</div>
+      <div class="learn-desc">10 méthodes concrètes pour gagner de l'argent avec ChatGPT en 2026 — freelance, ebooks, prompts, TikTok, formations. Avec des revenus estimés et des étapes détaillées.</div>
+      <a href="/gagner-argent-chatgpt.html" class="learn-link">Découvrir les méthodes →</a>
+    </div>
+    <div class="learn-card">
+      <div class="learn-icon">🛠️</div>
+      <div class="learn-title">Choisir les bons outils</div>
+      <div class="learn-desc">ChatGPT, Claude, Gemini, Grok — on a tout testé pour toi. Comparatifs honnêtes et recommandations selon ton usage pour ne pas perdre de temps avec les mauvais outils.</div>
+      <a href="/chatgpt-vs-claude-vs-gemini-vs-grok.html" class="learn-link">Voir le comparatif →</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HISTOIRE / QUI SOMMES-NOUS -->
+<section>
+  <span class="section-tag">✦ Qui sommes-nous</span>
+  <h2 class="section-title">Pas un site généré par IA.<br><em>Une vraie expérience humaine.</em></h2>
+  <div class="story-grid">
+    <div class="story-avatar">
+      <div class="story-avatar-img">🧑‍💻</div>
+      <div class="story-avatar-name">Le créateur</div>
+      <div class="story-avatar-role">Entrepreneur digital<br>basé en France</div>
+    </div>
+    <div class="story-content">
+      <p>Quand j'ai découvert ChatGPT pour la première fois, j'étais frustré. Je tapais des questions vagues et j'obtenais des réponses vagues. Comme beaucoup, je pensais que l'IA était surestimée.</p>
+      <p>Et puis j'ai compris quelque chose qui a tout changé : <strong>l'IA est aussi bonne que la façon dont on lui parle.</strong> La différence entre un résultat médiocre et un résultat exceptionnel, c'est le prompt — l'instruction qu'on donne à l'IA.</p>
+      <p>J'ai passé des centaines d'heures à apprendre, tester, rater, recommencer. À comprendre ce qui fonctionne vraiment et pourquoi. À trouver les formulations précises qui donnent des résultats reproductibles et professionnels.</p>
+      <div class="story-highlight">
+        <p>"FlowPrompt c'est le résultat de tout ce travail. Ces guides et ces prompts, je les utilise moi-même tous les jours. Ils ne sont pas générés automatiquement — ils ont été écrits, testés et améliorés à la main, un par un."</p>
+      </div>
+      <p>Mon objectif est simple : te faire gagner les centaines d'heures que j'ai investies pour trouver ce qui fonctionne vraiment. Pour que toi, tu puisses commencer à utiliser l'IA efficacement et à générer des revenus — dès cette semaine.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GÉNÉRATEUR GRATUIT -->
+<section id="generateur">
+  <span class="section-tag">✦ Outil gratuit</span>
+  <h2 class="section-title">Génère un prompt<br><em>professionnel gratuitement</em></h2>
+  <p class="section-sub">Décris ce que tu veux accomplir — l'outil crée un prompt optimisé prêt à copier dans ChatGPT, Claude, Gemini ou Grok. Entièrement gratuit, sans inscription.</p>
+  <div class="generator-wrap">
+    <p class="gen-intro">Ce générateur utilise des techniques de prompt engineering avancées pour transformer ton idée en instruction précise et efficace. Contrairement à une simple question posée à l'IA, un bon prompt définit un rôle, un contexte, des instructions détaillées et un format de sortie — ce qui fait toute la différence dans la qualité du résultat.</p>
+    <div class="gen-grid">
+      <div class="gen-field" style="grid-column:1/-1">
+        <label>Décris ton idée ou ton objectif</label>
+        <textarea id="genIdea" placeholder="Ex : je veux créer du contenu TikTok sur la cuisine healthy pour gagner des abonnés et monétiser mon compte..."></textarea>
+      </div>
+      <div class="gen-field">
+        <label>Objectif principal</label>
+        <select id="genObjectif">
+          <option value="vendre">Vendre / Convaincre</option>
+          <option value="contenu">Créer du contenu viral</option>
+          <option value="ecrire">Écrire / Rédiger</option>
+          <option value="apprendre">Apprendre / Expliquer</option>
+          <option value="analyser">Analyser / Stratégie</option>
+          <option value="automatiser">Automatiser / Productivité</option>
+        </select>
+      </div>
+      <div class="gen-field">
+        <label>Outil IA cible</label>
+        <select id="genPlateforme">
+          <option value="ChatGPT">ChatGPT</option>
+          <option value="Claude">Claude</option>
+          <option value="Gemini">Gemini</option>
+          <option value="Grok">Grok</option>
+          <option value="toutes les IA">Toutes les IA</option>
+        </select>
+      </div>
+    </div>
+    <button class="gen-btn" id="genBtn">✦ Générer mon prompt professionnel</button>
+    <div class="gen-loading" id="genLoading">⟳ Création de ton prompt en cours...</div>
+    <div class="gen-result" id="genResult">
+      <div class="gen-result-label">✦ Ton prompt professionnel — prêt à copier-coller</div>
+      <div class="gen-result-text" id="genResultText"></div>
+      <button class="gen-copy" id="genCopy">Copier le prompt</button>
+    </div>
+    <div class="gen-note" id="genNote">💡 Tu veux accéder à 400+ prompts comme celui-ci, organisés par thème et optimisés pour chaque cas d'usage ? <a href="#packs">Découvrir les packs →</a></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GUIDE PRATIQUE -->
+<section>
+  <span class="section-tag">✦ Guide pratique</span>
+  <h2 class="section-title">Comment écrire<br><em>un bon prompt IA</em></h2>
+  <p class="section-sub">La plupart des gens utilisent l'IA de façon basique et obtiennent des résultats basiques. Voilà les 4 éléments d'un prompt professionnel qui fait vraiment la différence.</p>
+  <div class="guide-grid">
+    <div class="guide-card">
+      <div class="guide-num">01</div>
+      <div class="guide-title">Définir un rôle expert</div>
+      <div class="guide-desc">Commencez toujours par "Tu es un expert en [domaine]". L'IA adopte le niveau d'expertise que vous lui attribuez. Un "expert en copywriting avec 10 ans d'expérience" donne systématiquement de meilleurs résultats qu'une simple question posée directement.</div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-num">02</div>
+      <div class="guide-title">Donner un contexte précis</div>
+      <div class="guide-desc">L'IA ne connaît pas votre situation. Plus vous lui donnez de contexte — votre cible, votre objectif, vos contraintes — plus la réponse sera adaptée et utilisable directement. Un prompt vague donne une réponse vague. C'est inévitable.</div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-num">03</div>
+      <div class="guide-title">Spécifier le format de sortie</div>
+      <div class="guide-desc">Dites explicitement ce que vous voulez : "rédige 5 points", "en moins de 200 mots", "avec des titres H2", "sous forme de tableau". Sans instruction de format, l'IA choisit elle-même — et ce n'est pas toujours ce dont vous avez besoin.</div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-num">04</div>
+      <div class="guide-title">Itérer et affiner</div>
+      <div class="guide-desc">Le premier résultat est rarement le meilleur. Demandez des variantes, des reformulations, un ton différent. L'IA s'améliore à chaque échange si vous guidez précisément. La maîtrise des prompts c'est un dialogue, pas une commande unique.</div>
+    </div>
+  </div>
+</section>
+
+
+<div class="divider"></div>
+
+<!-- L'IA EXPLIQUÉE SIMPLEMENT -->
+<section>
+  <span class="section-tag">✦ L'IA pour les débutants</span>
+  <h2 class="section-title">L'intelligence artificielle<br><em>accessible à tous</em></h2>
+  <p class="section-sub">Pas de jargon technique. Juste ce qu'il faut savoir pour commencer à utiliser l'IA aujourd'hui — même si tu n'as jamais entendu parler de ChatGPT avant.</p>
+
+  <div style="margin-top:48px;background:var(--card);border:1px solid var(--border);padding:40px">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;margin-bottom:24px">C'est quoi l'IA, concrètement ?</h3>
+    <p style="font-size:16px;color:rgba(245,240,232,0.78);font-weight:300;line-height:1.9;margin-bottom:20px">L'intelligence artificielle, c'est un programme informatique capable de comprendre du texte et d'y répondre de façon cohérente et intelligente. Imagine un assistant ultra-compétent disponible 24h/24, capable de rédiger, analyser, expliquer, traduire, coder ou brainstormer avec toi en quelques secondes.</p>
+    <p style="font-size:16px;color:rgba(245,240,232,0.78);font-weight:300;line-height:1.9;margin-bottom:20px">La différence avec un moteur de recherche comme Google ? Google te donne des liens vers des pages web. L'IA, elle, <strong style="color:var(--white)">comprend ta question et te donne directement une réponse construite</strong>, adaptée à ton contexte exact.</p>
+    <p style="font-size:16px;color:rgba(245,240,232,0.78);font-weight:300;line-height:1.9">Pour l'utiliser, tu n'as besoin d'aucune compétence technique. Tu écris ce que tu veux (c'est le "prompt"), l'IA te répond. C'est aussi simple que d'envoyer un message WhatsApp.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:2px">
+    <div style="background:var(--card);border:1px solid var(--border);padding:36px">
+      <div style="font-size:32px;margin-bottom:16px">🟢</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px">ChatGPT</div>
+      <div style="font-size:13px;font-family:'DM Mono',monospace;color:var(--gold);margin-bottom:12px;letter-spacing:0.08em">PAR OPENAI · GRATUIT + PAYANT</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:0">Le plus connu et le plus utilisé au monde. Excellent pour toutes les tâches du quotidien — rédaction, analyse, code, brainstorming. La version gratuite est largement suffisante pour débuter. <strong style="color:var(--white)">Idéal pour commencer.</strong></p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:36px">
+      <div style="font-size:32px;margin-bottom:16px">🟡</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px">Claude</div>
+      <div style="font-size:13px;font-family:'DM Mono',monospace;color:var(--gold);margin-bottom:12px;letter-spacing:0.08em">PAR ANTHROPIC · GRATUIT + PAYANT</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:0">L'IA la plus "humaine" dans ses réponses. Excellente pour la rédaction créative, l'analyse de longs documents et les tâches qui demandent de la nuance. <strong style="color:var(--white)">Meilleur pour écrire.</strong></p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:36px">
+      <div style="font-size:32px;margin-bottom:16px">🔵</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px">Gemini</div>
+      <div style="font-size:13px;font-family:'DM Mono',monospace;color:var(--gold);margin-bottom:12px;letter-spacing:0.08em">PAR GOOGLE · GRATUIT</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:0">L'IA de Google, intégrée à Gmail et Google Docs. Son grand avantage : accès aux informations en temps réel. <strong style="color:var(--white)">Meilleur pour les infos récentes.</strong></p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:36px">
+      <div style="font-size:32px;margin-bottom:16px">⚫</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px">Grok</div>
+      <div style="font-size:13px;font-family:'DM Mono',monospace;color:var(--gold);margin-bottom:12px;letter-spacing:0.08em">PAR XAI · INCLUS X PREMIUM</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:0">L'IA d'Elon Musk, intégrée à X (Twitter). Moins censuré, accès aux données en temps réel du réseau social. <strong style="color:var(--white)">Meilleur pour le contenu viral.</strong></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LEXIQUE IA -->
+<section>
+  <span class="section-tag">✦ Lexique</span>
+  <h2 class="section-title">Les mots à connaître<br><em>pour utiliser l'IA</em></h2>
+  <p class="section-sub">8 termes essentiels expliqués simplement — pour ne plus être perdu quand tu lis des articles sur l'IA.</p>
+
+  <div style="margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:2px">
+    <div style="background:var(--card);border:1px solid var(--border);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold)">Prompt</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0">L'instruction que tu donnes à l'IA. C'est ta "commande". Plus elle est précise, meilleure sera la réponse. C'est LE mot clé à retenir.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold)">LLM</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0">Large Language Model — c'est le nom technique des IA comme ChatGPT. Ce sont des modèles entraînés sur d'énormes quantités de texte pour comprendre et générer du langage.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold)">Token</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0">L'unité de mesure du texte pour les IA. Environ 1 token = 1 mot. Les IA ont une limite de tokens qu'elles peuvent traiter en une fois — c'est pourquoi certains textes très longs posent problème.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold)">Hallucination</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0">Quand l'IA invente des informations qui semblent vraies mais sont fausses. C'est le principal défaut des IA actuelles — toujours vérifier les faits importants.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold)">Contexte</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0">Les informations que tu donnes à l'IA pour qu'elle comprenne ta situation. Plus tu donnes de contexte (qui tu es, ton objectif, ta cible), plus la réponse sera pertinente.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold)">Fine-tuning</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0">L'entraînement supplémentaire d'un modèle IA sur des données spécifiques pour le spécialiser dans un domaine. C'est ainsi que des IA médicales ou juridiques sont créées.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold)">GPT</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0">Generative Pre-trained Transformer — le type de modèle IA utilisé par ChatGPT. "Generative" car il génère du texte, "Pre-trained" car il a été entraîné au préalable sur de vastes données.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold)">RAG</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0">Retrieval-Augmented Generation — une technique qui permet à l'IA de chercher des informations dans des documents externes avant de répondre. Utilisée pour éviter les hallucinations.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AVANT / APRÈS EXEMPLES -->
+<section>
+  <span class="section-tag">✦ Exemples concrets</span>
+  <h2 class="section-title">Prompt basique vs<br><em>prompt professionnel</em></h2>
+  <p class="section-sub">La différence de résultat entre un prompt vague et un prompt bien construit est énorme. Voilà 3 exemples concrets pour comprendre immédiatement l'impact.</p>
+
+  <div style="margin-top:48px">
+    <!-- Exemple 1 -->
+    <div style="margin-bottom:4px">
+      <div style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);padding:12px 24px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)">Exemple 1 — Créer un post Instagram</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
+        <div style="background:rgba(255,80,80,0.05);border:1px solid rgba(255,80,80,0.15);padding:28px">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,100,100,0.7);margin-bottom:12px">❌ Prompt basique</div>
+          <div style="background:rgba(0,0,0,0.3);padding:14px;font-size:13px;color:rgba(245,240,232,0.5);font-style:italic;line-height:1.7;margin-bottom:12px">"Écris un post Instagram sur ma boutique de vêtements"</div>
+          <p style="font-size:13px;color:rgba(245,240,232,0.5);margin:0;line-height:1.7">Résultat : texte générique, sans personnalité, qui ne convertit pas. Ressemble à des milliers d'autres posts.</p>
+        </div>
+        <div style="background:rgba(80,200,120,0.05);border:1px solid rgba(80,200,120,0.15);padding:28px">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(100,220,140,0.7);margin-bottom:12px">✅ Prompt professionnel</div>
+          <div style="background:rgba(0,0,0,0.3);padding:14px;font-size:13px;color:rgba(245,240,232,0.7);font-style:italic;line-height:1.7;margin-bottom:12px">"Tu es un expert en marketing Instagram pour les boutiques de mode. Rédige un post pour ma boutique de vêtements vintage à Paris, ciblant des femmes de 25-35 ans passionnées par la mode durable. Inclus : une accroche émotionnelle, 2 phrases sur les bénéfices, un appel à l'action, et 8 hashtags pertinents. Ton : chaleureux et authentique."</div>
+          <p style="font-size:13px;color:rgba(100,220,140,0.8);margin:0;line-height:1.7">Résultat : post personnalisé, ciblé, avec le bon ton et les bons hashtags. Prêt à publier.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exemple 2 -->
+    <div style="margin-bottom:4px;margin-top:4px">
+      <div style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);padding:12px 24px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)">Exemple 2 — Rédiger un email professionnel</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
+        <div style="background:rgba(255,80,80,0.05);border:1px solid rgba(255,80,80,0.15);padding:28px">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,100,100,0.7);margin-bottom:12px">❌ Prompt basique</div>
+          <div style="background:rgba(0,0,0,0.3);padding:14px;font-size:13px;color:rgba(245,240,232,0.5);font-style:italic;line-height:1.7;margin-bottom:12px">"Écris un email pour demander une augmentation"</div>
+          <p style="font-size:13px;color:rgba(245,240,232,0.5);margin:0;line-height:1.7">Résultat : email trop formel ou trop décontracté, sans argument solide. Peut faire plus de mal que de bien.</p>
+        </div>
+        <div style="background:rgba(80,200,120,0.05);border:1px solid rgba(80,200,120,0.15);padding:28px">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(100,220,140,0.7);margin-bottom:12px">✅ Prompt professionnel</div>
+          <div style="background:rgba(0,0,0,0.3);padding:14px;font-size:13px;color:rgba(245,240,232,0.7);font-style:italic;line-height:1.7;margin-bottom:12px">"Tu es un coach en négociation salariale. Rédige un email pour demander une augmentation de 15% à mon manager. Je travaille depuis 3 ans dans cette entreprise, j'ai géré 3 projets majeurs cette année et mon marché salarial a augmenté de 10%. Ton : professionnel, confiant sans être arrogant, factuel. Maximum 200 mots."</div>
+          <p style="font-size:13px;color:rgba(100,220,140,0.8);margin:0;line-height:1.7">Résultat : email structuré avec des arguments solides, le bon ton et une demande claire.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exemple 3 -->
+    <div style="margin-top:4px">
+      <div style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);padding:12px 24px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)">Exemple 3 — Apprendre un concept compliqué</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
+        <div style="background:rgba(255,80,80,0.05);border:1px solid rgba(255,80,80,0.15);padding:28px">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,100,100,0.7);margin-bottom:12px">❌ Prompt basique</div>
+          <div style="background:rgba(0,0,0,0.3);padding:14px;font-size:13px;color:rgba(245,240,232,0.5);font-style:italic;line-height:1.7;margin-bottom:12px">"Explique-moi la blockchain"</div>
+          <p style="font-size:13px;color:rgba(245,240,232,0.5);margin:0;line-height:1.7">Résultat : explication technique trop complexe, pleine de jargon, difficile à comprendre pour un débutant.</p>
+        </div>
+        <div style="background:rgba(80,200,120,0.05);border:1px solid rgba(80,200,120,0.15);padding:28px">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(100,220,140,0.7);margin-bottom:12px">✅ Prompt professionnel</div>
+          <div style="background:rgba(0,0,0,0.3);padding:14px;font-size:13px;color:rgba(245,240,232,0.7);font-style:italic;line-height:1.7;margin-bottom:12px">"Tu es un pédagogue expert. Explique-moi la blockchain comme si j'avais 12 ans, sans aucun jargon technique. Utilise une analogie de la vie quotidienne que tout le monde comprend. Ensuite donne-moi 3 exemples concrets d'utilisation réelle aujourd'hui. Maximum 200 mots."</div>
+          <p style="font-size:13px;color:rgba(100,220,140,0.8);margin:0;line-height:1.7">Résultat : explication claire, mémorable, avec des analogies concrètes. Compréhensible en 2 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+<div class="ad-wrap" style="padding:32px 48px;"><div class="ad-slot">Publicité — AdSense</div></div>
+<div class="divider"></div>
+
+<!-- BLOG -->
+<section id="blog">
+  <span class="section-tag">✦ Guides & Articles</span>
+  <h2 class="section-title">Tout ce qu'il faut savoir<br><em>pour bien utiliser l'IA</em></h2>
+  <p class="section-sub">Des guides complets, honnêtes et pratiques — pas du contenu vide généré automatiquement. Chaque article est écrit et vérifié par notre équipe.</p>
+  <div class="blog-grid">
+    <a href="/blog.html" class="blog-card"><div class="blog-card-img">🧠</div><div class="blog-card-body"><span class="blog-card-tag">✦ Débutants · 8 min</span><div class="blog-card-title">Les 20 meilleurs prompts IA pour débutants (2026)</div><div class="blog-card-excerpt">Les formules qui fonctionnent vraiment, les erreurs à éviter, et 11 prompts prêts à utiliser dès maintenant.</div><div class="blog-card-link">Lire le guide →</div></div></a>
+    <a href="/gagner-argent-chatgpt.html" class="blog-card"><div class="blog-card-img">💸</div><div class="blog-card-body"><span class="blog-card-tag">✦ Business · 15 min</span><div class="blog-card-title">Comment gagner de l'argent avec ChatGPT en 2026</div><div class="blog-card-excerpt">10 méthodes concrètes avec revenus estimés, étapes détaillées et un prompt prêt à utiliser pour chaque méthode.</div><div class="blog-card-link">Découvrir les méthodes →</div></div></a>
+    <a href="/creer-vendre-prompts-ia.html" class="blog-card"><div class="blog-card-img">💰</div><div class="blog-card-body"><span class="blog-card-tag">✦ Guide Business · 12 min</span><div class="blog-card-title">Comment créer et vendre des prompts IA en 2026</div><div class="blog-card-excerpt">De la création à la première vente — le guide complet pour monétiser ton expertise en prompts IA.</div><div class="blog-card-link">Lire le guide →</div></div></a>
+    <a href="/outils-ia-gratuits-gagner-argent.html" class="blog-card"><div class="blog-card-img">🛠️</div><div class="blog-card-body"><span class="blog-card-tag">✦ Comparatif · 10 min</span><div class="blog-card-title">Top 10 outils IA gratuits pour gagner de l'argent en 2026</div><div class="blog-card-excerpt">On a tout testé pour toi. Les 10 meilleurs outils IA gratuits avec une stratégie de revenus pour chacun.</div><div class="blog-card-link">Voir le comparatif →</div></div></a>
+    <a href="/chatgpt-vs-claude-vs-gemini-vs-grok.html" class="blog-card"><div class="blog-card-img">⚔️</div><div class="blog-card-body"><span class="blog-card-tag">✦ Comparatif · 15 min</span><div class="blog-card-title">ChatGPT vs Claude vs Gemini vs Grok — le vrai comparatif 2026</div><div class="blog-card-excerpt">3 mois de tests intensifs. Tableau comparatif complet sur 9 critères et verdict honnête pour chaque usage.</div><div class="blog-card-link">Lire le comparatif →</div></div></a>
+    <a href="/ia-va-remplacer-votre-travail.html" class="blog-card"><div class="blog-card-img">🤖</div><div class="blog-card-body"><span class="blog-card-tag">✦ Analyse · 10 min</span><div class="blog-card-title">L'IA va-t-elle remplacer ton travail ? La vérité en 2026</div><div class="blog-card-excerpt">Sans catastrophisme ni naïveté — les métiers vraiment menacés, ceux qui sont protégés, et le plan d'action.</div><div class="blog-card-link">Lire l'analyse →</div></div></a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TÉMOIGNAGES -->
+<section>
+  <span class="section-tag">✦ Ils témoignent</span>
+  <h2 class="section-title">Ce que disent<br><em>nos lecteurs</em></h2>
+  <div class="testi-grid">
+    <div class="testi"><div class="stars">★★★★★</div><div class="testi-text">"Franchement j'étais sceptique. Mais en 2 semaines avec le pack TikTok : +3 000 abonnés, 4 vidéos virales et mes premières ventes. Je n'aurais pas cru ça possible."</div><div class="testi-author"><div class="testi-avatar">MA</div><div><div class="testi-name">Marie A.</div><div class="testi-role">Créatrice de contenu · Paris</div></div></div></div>
+    <div class="testi"><div class="stars">★★★★★</div><div class="testi-text">"Je n'avais jamais écrit de ma vie. Avec le pack ebook, j'ai rédigé mon premier livre en 4 jours. Il me rapporte 300€/mois en passif depuis 6 mois — sans rien faire de plus."</div><div class="testi-author"><div class="testi-avatar">TK</div><div><div class="testi-name">Thomas K.</div><div class="testi-role">Entrepreneur digital · Lyon</div></div></div></div>
+    <div class="testi"><div class="stars">★★★★★</div><div class="testi-text">"Ma boutique Etsy stagnait depuis 2 ans. Après le pack marketing : +240% de vues en 30 jours et mes ventes ont doublé. J'aurais dû le faire bien plus tôt."</div><div class="testi-author"><div class="testi-avatar">SL</div><div><div class="testi-name">Sophie L.</div><div class="testi-role">Vendeuse Etsy · Bordeaux</div></div></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PACKS -->
+<section id="packs">
+  <span class="section-tag">✦ Les packs de prompts</span>
+  <h2 class="section-title">Des centaines de prompts<br><em>testés et organisés</em></h2>
+  <p class="section-sub">Pour aller plus loin que le générateur gratuit, nos packs contiennent des centaines de prompts optimisés, classés par thème et prêts à l'emploi — livrés instantanément par email.</p>
+  <div class="packs-grid">
+    <div class="pack-card featured">
+      <div class="pack-badge">Bestseller</div>
+      <div class="pack-icon">💸</div>
+      <h3>Gagner de l'argent avec l'IA</h3>
+      <p>100 prompts pour trouver ton idée de business, créer ton premier produit digital et générer tes premiers revenus — même en partant de zéro.</p>
+      <ul class="pack-features"><li>100 prompts classés par thème</li><li>Idées side hustles, freelance, digital</li><li>Compatible toutes les IA</li><li>Mises à jour incluses à vie</li></ul>
+      <div class="pack-price">29€</div><div class="pack-price-label">via Gumroad · livraison en 2 min</div>
+      <a href="https://thomaventure3.gumroad.com/l/gfbii" target="_blank" class="pack-btn">Accéder au pack →</a>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">🎵</div>
+      <h3>TikTok Viral</h3>
+      <p>80 prompts pour créer des vidéos qui explosent ton audience et monétiser ton compte TikTok — même sans montrer ton visage.</p>
+      <ul class="pack-features"><li>80 prompts TikTok testés</li><li>Hooks, scripts, légendes, hashtags</li><li>Pour toutes les niches</li></ul>
+      <div class="pack-price">19€</div><div class="pack-price-label">via Gumroad · livraison en 2 min</div>
+      <a href="https://thomaventure3.gumroad.com/l/jyzly" target="_blank" class="pack-btn">Accéder au pack →</a>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">📖</div>
+      <h3>Écrire un Ebook</h3>
+      <p>70 prompts pour écrire et vendre ton premier ebook en moins d'une semaine — et générer des revenus passifs 24h/24.</p>
+      <ul class="pack-features"><li>Structure complète d'ebook</li><li>Rédaction chapitre par chapitre</li><li>Titres, couvertures, descriptions</li></ul>
+      <div class="pack-price">19€</div><div class="pack-price-label">via Gumroad · livraison en 2 min</div>
+      <a href="https://thomaventure3.gumroad.com/l/ehaxk" target="_blank" class="pack-btn">Accéder au pack →</a>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">🛍️</div>
+      <h3>Marketing Etsy</h3>
+      <p>60 prompts pour multiplier tes ventes Etsy en optimisant tes fiches produits — résultats visibles en 30 jours.</p>
+      <ul class="pack-features"><li>Titres et tags SEO optimisés</li><li>Descriptions qui convertissent</li><li>Idées produits tendance</li></ul>
+      <div class="pack-price">14€</div><div class="pack-price-label">via Gumroad · livraison en 2 min</div>
+      <a href="https://thomaventure3.gumroad.com/l/qapks" target="_blank" class="pack-btn">Accéder au pack →</a>
+    </div>
+    <div class="pack-card">
+      <div class="pack-icon">📱</div>
+      <h3>Contenu Instagram</h3>
+      <p>90 prompts pour développer ton Instagram et transformer tes abonnés en clients — adapté à tous les secteurs.</p>
+      <ul class="pack-features"><li>Captions, hooks, CTA efficaces</li><li>Programme de contenu 30 jours</li><li>Tous secteurs d'activité</li></ul>
+      <div class="pack-price">19€</div><div class="pack-price-label">via Gumroad · livraison en 2 min</div>
+      <a href="https://thomaventure3.gumroad.com/l/heipln" target="_blank" class="pack-btn">Accéder au pack →</a>
+    </div>
+    <div class="pack-card featured">
+      <div class="pack-badge red">🔥 Meilleure valeur</div>
+      <div class="pack-icon">📦</div>
+      <h3>Pack Complet ALL-IN</h3>
+      <p>Tous les packs réunis pour maximiser tes résultats sur tous les canaux — TikTok, Instagram, Etsy, ebooks et business en ligne.</p>
+      <ul class="pack-features"><li>400+ prompts au total</li><li>Tous les packs actuels + futurs</li><li>Accès prioritaire aux nouveautés</li><li>Économie de 50€ vs séparément</li></ul>
+      <div class="pack-price">49€</div><div class="pack-price-label">via Gumroad · livraison en 2 min</div>
+      <a href="https://thomaventure3.gumroad.com/l/ccdqb" target="_blank" class="pack-btn" style="background:var(--gold);color:#080808;font-weight:700">Accéder à tout →</a>
+    </div>
+  </div>
+  <div class="garantie">
+    <div class="garantie-item"><span class="garantie-icon">🔒</span><div><div class="garantie-title">Paiement sécurisé</div><div class="garantie-desc">Via Gumroad — carte bancaire & PayPal</div></div></div>
+    <div class="garantie-item"><span class="garantie-icon">⚡</span><div><div class="garantie-title">Livraison instantanée</div><div class="garantie-desc">Email en moins de 2 minutes</div></div></div>
+    <div class="garantie-item"><span class="garantie-icon">💰</span><div><div class="garantie-title">Satisfait ou remboursé</div><div class="garantie-desc">Garantie 7 jours sans condition</div></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SIMULATEUR -->
+<section id="revenus">
+  <span class="section-tag">✦ Simulateur de revenus</span>
+  <h2 class="section-title">Estime ton potentiel<br><em>de revenus mensuels</em></h2>
+  <p class="section-sub">Cet outil illustre le potentiel de revenus selon différents scénarios — à titre indicatif uniquement. Les résultats réels dépendent de nombreux facteurs.</p>
+  <div class="sim-wrap">
+    <div class="sim-header">
+      <h3>Simulateur de revenus <em>interactif</em></h3>
+      <p>Ajuste les curseurs pour visualiser différents scénarios de revenus mensuels.</p>
+    </div>
+    <div class="sim-body">
+      <div class="sim-left">
+        <div class="sim-slider">
+          <div class="sim-slider-header"><span class="sim-slider-label">Ventes par jour</span><span><span class="sim-slider-val" id="ventesVal">10</span><span class="sim-slider-unit">ventes</span></span></div>
+          <input type="range" min="1" max="50" value="10" id="ventesSlider">
+          <div class="sim-presets">
+            <button class="sim-preset" onclick="setVentes(2)">Débutant</button>
+            <button class="sim-preset active" onclick="setVentes(10)">Moyen</button>
+            <button class="sim-preset" onclick="setVentes(25)">Avancé</button>
+            <button class="sim-preset" onclick="setVentes(50)">Expert</button>
+          </div>
+        </div>
+        <div class="sim-slider">
+          <div class="sim-slider-header"><span class="sim-slider-label">Prix du pack</span><span><span class="sim-slider-val" id="prixVal">19</span><span class="sim-slider-unit">€</span></span></div>
+          <input type="range" min="9" max="49" value="19" id="prixSlider">
+          <div class="sim-presets">
+            <button class="sim-preset" onclick="setPrix(14)">14€</button>
+            <button class="sim-preset active" onclick="setPrix(19)">19€</button>
+            <button class="sim-preset" onclick="setPrix(29)">29€</button>
+            <button class="sim-preset" onclick="setPrix(49)">49€</button>
+          </div>
+        </div>
+      </div>
+      <div class="sim-right">
+        <div class="sim-result-main">
+          <div class="sim-result-label">Estimation mensuelle</div>
+          <div class="sim-amount"><span class="currency">€</span><span class="value" id="monthly">5 700</span></div>
+        </div>
+        <div class="sim-breakdown">
+          <div class="sim-break-item"><div class="sim-break-label">Par jour</div><div class="sim-break-val" id="daily">190€</div></div>
+          <div class="sim-break-item"><div class="sim-break-label">Par semaine</div><div class="sim-break-val" id="weekly">1 330€</div></div>
+          <div class="sim-break-item"><div class="sim-break-label">Par an</div><div class="sim-break-val" id="yearly">68 400€</div></div>
+          <div class="sim-break-item"><div class="sim-break-label">Vers 10K/mois</div><div class="sim-break-val" id="growth">57%</div></div>
+        </div>
+        <div class="sim-bar-wrap">
+          <div class="sim-bar-label"><span>Progression vers 10 000€/mois</span><span id="barPct">57%</span></div>
+          <div class="sim-bar-track"><div class="sim-bar-fill" id="barFill" style="width:57%"></div></div>
+        </div>
+        <a href="#packs" class="sim-cta">Voir les packs pour commencer →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+<div class="ad-wrap" style="padding:32px 48px;"><div class="ad-slot">Publicité — Bannière Basse</div></div>
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section id="faq">
+  <span class="section-tag">✦ Questions fréquentes</span>
+  <h2 class="section-title">Les questions<br><em>qu'on nous pose souvent</em></h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>C'est quoi exactement un pack de prompts ? <span class="faq-icon">+</span></summary><div class="faq-a">Un pack de prompts est une collection d'instructions précises et optimisées à copier-coller dans ChatGPT, Claude, Gemini ou Grok. Ces instructions sont conçues pour obtenir des résultats de qualité professionnelle à chaque utilisation — sans avoir besoin de connaître les techniques de prompt engineering. C'est comme avoir une bibliothèque de "recettes" pour l'IA, chacune testée pour un objectif précis.</div></details>
+    <details class="faq-item"><summary>Faut-il être expert en IA pour utiliser les prompts ? <span class="faq-icon">+</span></summary><div class="faq-a">Absolument pas. Nos prompts sont conçus pour être utilisés par n'importe qui — y compris des personnes qui n'ont jamais utilisé ChatGPT. Si vous savez copier du texte et le coller dans une boîte de dialogue, vous savez utiliser nos prompts. La complexité technique est déjà gérée pour vous.</div></details>
+    <details class="faq-item"><summary>Ces prompts fonctionnent avec quelle version de ChatGPT ? <span class="faq-icon">+</span></summary><div class="faq-a">Nos prompts sont compatibles avec toutes les versions de ChatGPT (version gratuite et payante), mais aussi avec Claude, Gemini et Grok. La version gratuite de ChatGPT suffit pour la grande majorité des prompts — vous n'avez pas besoin d'un abonnement payant pour commencer.</div></details>
+    <details class="faq-item"><summary>Comment je reçois mon pack après l'achat ? <span class="faq-icon">+</span></summary><div class="faq-a">Dès que votre paiement est confirmé, Gumroad vous envoie automatiquement un email avec un lien de téléchargement sécurisé. Ce lien reste actif pour que vous puissiez télécharger votre pack à tout moment. Le délai est généralement de moins de 2 minutes. Vérifiez vos spams si vous ne recevez rien.</div></details>
+    <details class="faq-item"><summary>Est-ce qu'il y a une garantie de remboursement ? <span class="faq-icon">+</span></summary><div class="faq-a">Oui, nous offrons une garantie de remboursement de 7 jours sans condition. Si vous n'êtes pas satisfait de votre achat pour quelque raison que ce soit, contactez-nous via le formulaire de contact et nous procédons au remboursement intégral. Pas de questions posées.</div></details>
+    <details class="faq-item"><summary>Puis-je utiliser les prompts pour créer du contenu commercial ? <span class="faq-icon">+</span></summary><div class="faq-a">Oui. Vous êtes libre d'utiliser les prompts pour créer du contenu que vous vendez ou monétisez — articles de blog, ebooks, posts réseaux sociaux, descriptions produits, etc. La seule restriction est de ne pas revendre les fichiers de prompts eux-mêmes.</div></details>
+    <details class="faq-item"><summary>Quelle est la différence entre le générateur gratuit et les packs ? <span class="faq-icon">+</span></summary><div class="faq-a">Le générateur gratuit crée un prompt unique à partir de votre description — c'est un bon point de départ pour découvrir ce que peut faire l'IA. Les packs contiennent des centaines de prompts déjà construits, testés et optimisés pour des cas d'usage très spécifiques (TikTok, ebooks, Etsy, etc.). C'est la différence entre pêcher à la ligne et avoir un filet déjà rempli.</div></details>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-banner">
+  <h2>Prêt à utiliser l'IA<br><em>intelligemment ?</em></h2>
+  <p>Rejoins plus de 1 200 créateurs et entrepreneurs qui utilisent nos ressources chaque jour pour gagner du temps et générer des revenus avec l'IA.</p>
+  <a href="#apprendre" class="btn-primary">Commencer gratuitement →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">FlowPrompt</div>
+    <div class="footer-tagline">La ressource IA pour créer et générer des revenus</div>
+  </div>
+  <div class="footer-links">
+    <a href="/blog.html">Blog</a>
+    <a href="/a-propos.html">À propos</a>
+    <a href="/politique-confidentialite.html">Confidentialité</a>
+    <a href="/cgv.html">CGV</a>
+    <a href="/mentions-legales.html">Mentions légales</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 FlowPrompt · Tous droits réservés</div>
+</footer>
+
+<script>
+window.addEventListener('load', function() {
+
+  // NAV
+  window.addEventListener('scroll', function(){
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // SIMULATEUR
+  function updateSim() {
+    var v = parseInt(document.getElementById('ventesSlider').value);
+    var p = parseInt(document.getElementById('prixSlider').value);
+    document.getElementById('ventesVal').textContent = v;
+    document.getElementById('prixVal').textContent = p;
+    var daily = v * p;
+    var weekly = daily * 7;
+    var monthly = daily * 30;
+    var yearly = monthly * 12;
+    var pct = Math.min(Math.round((monthly / 10000) * 100), 100);
+    document.getElementById('daily').textContent = daily.toLocaleString('fr-FR') + '€';
+    document.getElementById('weekly').textContent = weekly.toLocaleString('fr-FR') + '€';
+    document.getElementById('monthly').textContent = monthly.toLocaleString('fr-FR');
+    document.getElementById('yearly').textContent = yearly.toLocaleString('fr-FR') + '€';
+    document.getElementById('barPct').textContent = pct + '%';
+    document.getElementById('barFill').style.width = pct + '%';
+    document.getElementById('growth').textContent = pct + '%';
+  }
+
+  document.getElementById('ventesSlider').addEventListener('input', updateSim);
+  document.getElementById('prixSlider').addEventListener('input', updateSim);
+
+  window.setVentes = function(v) {
+    document.getElementById('ventesSlider').value = v;
+    document.querySelectorAll('.sim-preset').forEach(function(b) {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes('setVentes')) {
+        b.classList.toggle('active', b.getAttribute('onclick').includes('(' + v + ')'));
+      }
+    });
+    updateSim();
+  };
+
+  window.setPrix = function(p) {
+    document.getElementById('prixSlider').value = p;
+    document.querySelectorAll('.sim-preset').forEach(function(b) {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes('setPrix')) {
+        b.classList.toggle('active', b.getAttribute('onclick').includes('(' + p + ')'));
+      }
+    });
+    updateSim();
+  };
+
+  // GENERATOR — illimité pour AdSense
+  document.getElementById('genBtn').addEventListener('click', function() {
+    var idea = document.getElementById('genIdea').value.trim();
+    if (!idea) { alert('Décris ton idée d\'abord !'); return; }
+    var objectif = document.getElementById('genObjectif').value;
+    var plateforme = document.getElementById('genPlateforme').value;
+    document.getElementById('genBtn').disabled = true;
+    document.getElementById('genLoading').style.display = 'block';
+    document.getElementById('genResult').style.display = 'none';
+    document.getElementById('genNote').style.display = 'none';
+    var t = {
+      'vendre': 'Tu es un expert en copywriting et persuasion avec 10 ans d\'expérience. Aide-moi à vendre : "' + idea + '".\n\nRédige un texte de vente percutant qui :\n1. Commence par une accroche qui identifie une douleur forte de ma cible\n2. Présente clairement les bénéfices (pas les fonctionnalités)\n3. Ajoute un élément de preuve sociale crédible\n4. Termine par un appel à l\'action clair et urgent\n\nTon style : direct, confiant, sans jargon. Adapté pour ' + plateforme + '.',
+      'contenu': 'Tu es un expert en création de contenu viral avec 5 ans d\'expérience sur les réseaux sociaux. Sujet : "' + idea + '".\n\nGénère :\n1. 5 hooks ultra-accrocheurs pour capturer l\'attention en 2 secondes (chacun utilise une technique différente : question, chiffre, contraire, curiosité, émotion)\n2. Un script complet de 60 secondes structuré : hook → valeur → CTA\n3. 10 hashtags pertinents et populaires\n4. Une légende engageante avec question pour booster les commentaires\n\nFormat optimisé pour ' + plateforme + '.',
+      'ecrire': 'Tu es un rédacteur professionnel expert avec 15 ans d\'expérience. Sujet : "' + idea + '".\n\nRédige un contenu de qualité professionnelle :\n1. Introduction percutante qui donne envie de lire la suite (problème + promesse)\n2. Développement en 3 parties avec exemples concrets et données\n3. Conclusion mémorable avec message fort\n4. 5 variantes de titre accrocheur testées sur différentes approches\n\nStyle : fluide, précis, engageant. Adapté pour ' + plateforme + '.',
+      'apprendre': 'Tu es un pédagogue expert avec 20 ans d\'expérience en formation. Sujet : "' + idea + '".\n\nExplique de façon claire et mémorable :\n1. Résumé en 2 phrases simples (niveau débutant absolu)\n2. Une analogie du quotidien pour comprendre intuitivement\n3. Les 5 points essentiels à retenir absolument\n4. Un exercice pratique pour ancrer la connaissance\n5. Les 3 prochaines étapes pour progresser\n\nAdapté pour ' + plateforme + '.',
+      'analyser': 'Tu es un consultant stratégique senior avec 20 ans d\'expérience. Mission : analyser "' + idea + '".\n\nAnalyse complète et actionnable :\n1. Diagnostic de la situation (forces, faiblesses, opportunités, menaces)\n2. Identification des 3 leviers prioritaires à activer maintenant\n3. Plan d\'action concret sur 30/60/90 jours avec actions spécifiques\n4. KPIs à suivre pour mesurer le succès\n5. Risques principaux et comment les mitiger\n\nAdapté pour ' + plateforme + '.',
+      'automatiser': 'Tu es un expert en productivité et automatisation avec 10 ans d\'expérience. Objectif : "' + idea + '".\n\nOptimise et automatise au maximum :\n1. Identifie les 5 plus grandes pertes de temps dans ce processus\n2. Propose 5 automatisations concrètes à mettre en place immédiatement\n3. Recommande les meilleurs outils (gratuits et payants) pour chaque étape\n4. Crée un workflow optimisé étape par étape\n5. Estime le temps gagné par semaine après optimisation\n\nAdapté pour ' + plateforme + '.'
+    };
+    setTimeout(function() {
+      var prompt = t[objectif] || t['contenu'];
+      document.getElementById('genResultText').textContent = prompt;
+      document.getElementById('genResult').style.display = 'block';
+      document.getElementById('genNote').style.display = 'block';
+      document.getElementById('genLoading').style.display = 'none';
+      document.getElementById('genBtn').disabled = false;
+    }, 800);
+  });
+
+  // COPY
+  document.getElementById('genCopy').addEventListener('click', function() {
+    var text = document.getElementById('genResultText').textContent;
+    navigator.clipboard.writeText(text).then(function() {
+      document.getElementById('genCopy').textContent = '✓ Copié !';
+      setTimeout(function() { document.getElementById('genCopy').textContent = 'Copier le prompt'; }, 2000);
+    });
+  });
+
+});
+</script>
+</body>
+</html>
