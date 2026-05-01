@@ -1,242 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlowPrompt — Maîtrise l'IA et génère des revenus en ligne</title>
-    <meta name="description" content="Apprends à utiliser ChatGPT, Claude et les IA pour créer des revenus concrets. Guides gratuits et packs de prompts testés.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #1f2937;
-            line-height: 1.7;
-        }
-        .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+<title>Prompts IA pour gagner de l'argent | FlowPrompt</title>
+<meta name="description" content="Prompts optimisés pour ChatGPT, Claude, Gemini et Grok pour générer du contenu et des revenus avec l'IA.">
 
-        /* Navigation */
-        .navbar {
-            background: white;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 1.2rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.1rem;
-            font-weight: 700;
-            color: #4f46e5;
-        }
-        .nav-menu a {
-            margin: 0 18px;
-            text-decoration: none;
-            color: #374151;
-            font-weight: 500;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: 600;
-        }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: white;
+  text-align: center;
+}
 
-        /* Hero */
-        .hero {
-            padding: 110px 0 90px;
-            text-align: center;
-            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-        }
-        .hero h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3.4rem;
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #6366f1, #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero-subtitle { font-size: 1.3rem; max-width: 720px; margin: 0 auto 40px; color: #4b5563; }
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
 
-        /* Sections */
-        .section { padding: 90px 0; }
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.7rem;
-            text-align: center;
-            margin-bottom: 50px;
-        }
+h1 {
+  font-size: 26px;
+}
 
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-        }
-        .emoji { font-size: 3.2rem; margin-bottom: 20px; }
+h2 {
+  margin-top: 40px;
+}
 
-        /* Générateur */
-        .generator-card {
-            max-width: 850px;
-            margin: 40px auto;
-            background: white;
-            border: 2px solid #6366f1;
-            border-radius: 20px;
-            padding: 45px 40px;
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.12);
-        }
-        textarea {
-            width: 100%;
-            height: 170px;
-            padding: 20px;
-            border: 2px solid #cbd5e1;
-            border-radius: 12px;
-            font-size: 1.1rem;
-        }
-        .btn-generate {
-            margin-top: 25px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-            padding: 18px 40px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 9999px;
-            cursor: pointer;
-            width: 100%;
-        }
-        .result-area {
-            margin-top: 30px;
-            padding: 25px;
-            background: #f8fafc;
-            border-radius: 12px;
-            border-left: 6px solid #6366f1;
-        }
-    </style>
+p {
+  color: #ccc;
+}
+
+textarea, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.result {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.cta {
+  display: block;
+  margin: 20px auto;
+  padding: 15px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.proof {
+  background: #111;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="nav-logo">FlowPrompt</div>
-            <div class="nav-menu">
-                <a href="#generateur">Générateur gratuit</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/gagner-argent-chatgpt.html">Gagner de l'argent</a>
-                <a href="/a-propos.html">À propos</a>
-            </div>
-            <a href="#packs" class="btn-primary">Voir les packs</a>
-        </div>
-    </nav>
+<div class="container">
 
-    <!-- Hero -->
-    <header class="hero">
-        <div class="container">
-            <h1>Maîtrise l’IA.<br><span class="gradient-text">Génère des revenus.</span></h1>
-            <p class="hero-subtitle">La ressource francophone pour passer de "je teste ChatGPT" à "je crée des revenus concrets avec l’IA".</p>
-            <a href="#generateur" class="btn-primary" style="font-size: 1.25rem; padding: 16px 45px;">Essayer le générateur gratuit</a>
-        </div>
-    </header>
+<!-- HERO -->
+<h1>Gagne de l’argent avec l’IA grâce à des prompts optimisés</h1>
+<p>Compatible ChatGPT, Claude, Gemini, Grok… génère du contenu, des idées et des revenus.</p>
 
-    <!-- Ce que tu vas apprendre -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Ce que tu vas apprendre ici</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="emoji">✍️</div>
-                    <h3>Rédiger avec l’IA</h3>
-                    <p>Articles, ebooks, emails, descriptions produits...</p>
-                    <a href="/blog.html" style="color:#6366f1; font-weight:600;">Lire les guides →</a>
-                </div>
-                <div class="card">
-                    <div class="emoji">💰</div>
-                    <h3>Générer des revenus</h3>
-                    <p>10 méthodes concrètes pour gagner de l’argent avec l’IA en 2026</p>
-                    <a href="/gagner-argent-chatgpt.html" style="color:#6366f1; font-weight:600;">Découvrir →</a>
-                </div>
-                <div class="card">
-                    <div class="emoji">🛠️</div>
-                    <h3>Choisir les bons outils</h3>
-                    <p>ChatGPT vs Claude vs Gemini vs Grok</p>
-                    <a href="/chatgpt-vs-claude-vs-gemini-vs-grok.html" style="color:#6366f1; font-weight:600;">Voir le comparatif →</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<a href="#generator" class="cta">Tester gratuitement</a>
 
-    <!-- Générateur amélioré -->
-    <section id="generateur" class="section">
-        <div class="container">
-            <h2 class="section-title">Générateur de prompt avancé gratuit</h2>
-            <div class="generator-card">
-                <textarea id="prompt-input" placeholder="Décris précisément ton projet...&#10;Exemple : Je veux créer une série de 15 posts LinkedIn pour promouvoir mon service de coaching en productivité, cible 30-45 ans, ton professionnel et motivant."></textarea>
-                <button onclick="genererPrompt()" class="btn-generate">✦ Générer un prompt puissant et optimisé</button>
-                <div id="result" class="result-area"></div>
-            </div>
-        </div>
-    </section>
+<!-- GENERATEUR -->
+<h2 id="generator">Générateur de prompt IA</h2>
 
-    <!-- Packs -->
-    <section id="packs" class="section">
-        <div class="container">
-            <h2 class="section-title">Nos packs de prompts</h2>
-            <div style="text-align:center; margin-top:40px;">
-                <div class="card" style="max-width:400px; margin:0 auto;">
-                    <h3>💸 Gagner de l'argent avec l'IA</h3>
-                    <p style="font-size:2.2rem; margin:15px 0;">29€</p>
-                    <a href="https://thomaventure3.gumroad.com/l/gfbii" class="btn-primary" style="display:inline-block;">Acheter sur Gumroad</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<textarea id="input" placeholder="Ex: Trouve 10 idées de business rentables..."></textarea>
 
-    <footer style="background:#0f172a; color:white; padding:60px 0; text-align:center;">
-        <div class="container">
-            <p>&copy; 2026 FlowPrompt — Ressource francophone pour réussir avec l’IA</p>
-        </div>
-    </footer>
+<select id="ai">
+  <option value="ChatGPT">ChatGPT</option>
+  <option value="Claude">Claude</option>
+  <option value="Gemini">Gemini</option>
+  <option value="Grok">Grok</option>
+</select>
 
-    <script>
-        function genererPrompt() {
-            const input = document.getElementById('prompt-input').value.trim();
-            const result = document.getElementById('result');
+<button onclick="generatePrompt()">Générer mon prompt</button>
 
-            if (!input) {
-                result.innerHTML = "<p style='color:#ef4444;'>Veuillez décrire votre projet pour générer un bon prompt.</p>";
-                return;
-            }
+<div id="result" class="result"></div>
 
-            result.innerHTML = `
-                <strong>✅ Prompt optimisé généré :</strong><br><br>
-                Tu es un expert mondial en prompt engineering et marketing digital.<br><br>
-                Objectif : ${input}<br><br>
-                Crée un prompt extrêmement détaillé, structuré et optimisé pour obtenir le meilleur résultat possible avec ChatGPT, Claude ou Grok.<br>
-                Utilise les meilleures techniques (rôle clair, contexte, format de sortie, exemples, étapes...).
-            `;
-        }
-    </script>
+<button onclick="copyPrompt()">Copier le prompt</button>
+
+<!-- UPSELL -->
+<div>
+  <p><strong>Tu veux +400 prompts optimisés ?</strong></p>
+  <a href="/pack" class="cta">Accéder au pack complet</a>
+</div>
+
+<!-- PROBLEME -->
+<h2>Pourquoi ça ne marche pas pour toi ?</h2>
+<p>Sans bons prompts = résultats médiocres.  
+Les bonnes instructions font toute la différence.</p>
+
+<!-- SOLUTION -->
+<h2>La solution</h2>
+<p>Des prompts optimisés pour chaque IA pour obtenir des résultats concrets rapidement.</p>
+
+<!-- OFFRE -->
+<h2>+400 prompts prêts à l’emploi</h2>
+<p>
+✔ Gagner de l’argent  
+✔ Créer du contenu  
+✔ Lancer un business  
+✔ Automatiser tes tâches
+</p>
+
+<a href="/pack" class="cta">Je veux le pack</a>
+
+<!-- PREUVE -->
+<h2>Avis utilisateurs</h2>
+
+<div class="proof">⭐⭐⭐⭐⭐ “Très utile, facile à utiliser.”</div>
+<div class="proof">⭐⭐⭐⭐⭐ “Gain de temps énorme.”</div>
+
+<!-- EMAIL -->
+<h2>10 prompts gratuits</h2>
+<p>Reçois 10 prompts exclusifs directement dans ta boîte mail</p>
+
+<input type="email" placeholder="Ton email" style="width:100%;padding:12px;border-radius:8px;">
+<button>Recevoir les prompts</button>
+
+<!-- SEO CONTENT -->
+<h2>Utiliser l’IA pour générer des revenus</h2>
+<p>
+Les outils comme ChatGPT, Claude ou Gemini permettent aujourd’hui de créer du contenu,
+automatiser des tâches et lancer un business en ligne.  
+Mais sans bons prompts, les résultats restent limités.  
+FlowPrompt propose des prompts optimisés pour exploiter chaque IA au maximum.
+</p>
+
+<!-- FOOTER -->
+<p style="margin-top:40px;font-size:12px;color:gray;">
+FlowPrompt - Support disponible sous 24h
+</p>
+
+</div>
+
+<script>
+function generatePrompt() {
+  let input = document.getElementById("input").value;
+  let ai = document.getElementById("ai").value;
+
+  let prompt = `Agis comme un expert en ${ai} et en intelligence artificielle.
+
+${input}
+
+Donne une réponse claire, structurée et exploitable immédiatement.`;
+
+  document.getElementById("result").innerText = prompt;
+}
+
+function copyPrompt() {
+  let text = document.getElementById("result").innerText;
+  navigator.clipboard.writeText(text);
+}
+</script>
+
 </body>
 </html>
