@@ -4,78 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Prompts IA pour gagner de l'argent | FlowPrompt</title>
-<meta name="description" content="Prompts optimisés pour ChatGPT, Claude, Gemini et Grok pour générer du contenu et des revenus avec l'IA.">
+<title>FlowPrompt</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0a0a0a;
-  color: white;
-  text-align: center;
+  margin:0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #111, #000);
+  color:white;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
+  max-width:420px;
+  margin:auto;
+  padding:20px;
 }
 
 h1 {
-  font-size: 26px;
+  font-size:26px;
+  font-weight:800;
+  line-height:1.3;
 }
 
-h2 {
-  margin-top: 40px;
+.gradient {
+  background: linear-gradient(90deg,#a855f7,#6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-p {
-  color: #ccc;
+.card {
+  background: #0f0f0f;
+  padding:20px;
+  border-radius:16px;
+  margin-top:25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-textarea, select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  margin-top: 10px;
-  border: none;
+textarea {
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  background:#000;
+  color:white;
+  margin-top:10px;
 }
 
-button {
-  width: 100%;
-  padding: 15px;
-  background: gold;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  margin-top: 10px;
+.ai-buttons {
+  display:flex;
+  gap:8px;
+  margin-top:15px;
+}
+
+.ai {
+  flex:1;
+  padding:10px;
+  text-align:center;
+  border-radius:10px;
+  background:#1a1a1a;
+  cursor:pointer;
+  font-size:13px;
+}
+
+.ai.active {
+  background: linear-gradient(90deg,#a855f7,#6366f1);
+}
+
+.button {
+  width:100%;
+  padding:16px;
+  margin-top:15px;
+  border:none;
+  border-radius:12px;
+  background: linear-gradient(90deg,#a855f7,#6366f1);
+  color:white;
+  font-weight:600;
+  font-size:16px;
 }
 
 .result {
-  background: #111;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
-  text-align: left;
+  margin-top:15px;
+  background:#000;
+  padding:15px;
+  border-radius:12px;
+  font-size:14px;
+  white-space:pre-wrap;
+}
+
+.copy {
+  background:#222;
 }
 
 .cta {
-  display: block;
-  margin: 20px auto;
-  padding: 15px;
-  background: gold;
-  color: black;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
+  display:block;
+  text-align:center;
+  margin-top:25px;
+  padding:16px;
+  border-radius:12px;
+  background:gold;
+  color:black;
+  font-weight:700;
+  text-decoration:none;
 }
 
-.proof {
-  background: #111;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 8px;
+.small {
+  font-size:12px;
+  color:#888;
+  margin-top:15px;
+  text-align:center;
 }
 </style>
 </head>
@@ -84,91 +122,57 @@ button {
 
 <div class="container">
 
-<!-- HERO -->
-<h1>Gagne de l’argent avec l’IA grâce à des prompts optimisés</h1>
-<p>Compatible ChatGPT, Claude, Gemini, Grok… génère du contenu, des idées et des revenus.</p>
+<h1>
+Gagne de l’argent avec l’IA grâce à des <span class="gradient">prompts optimisés</span>
+</h1>
 
-<a href="#generator" class="cta">Tester gratuitement</a>
+<div class="card">
 
-<!-- GENERATEUR -->
-<h2 id="generator">Générateur de prompt IA</h2>
+<p>Décris ton besoin :</p>
 
-<textarea id="input" placeholder="Ex: Trouve 10 idées de business rentables..."></textarea>
+<textarea id="input" placeholder="Ex : trouve 10 idées de business rentables..."></textarea>
 
-<select id="ai">
-  <option value="ChatGPT">ChatGPT</option>
-  <option value="Claude">Claude</option>
-  <option value="Gemini">Gemini</option>
-  <option value="Grok">Grok</option>
-</select>
+<p>Choisis ton IA :</p>
 
-<button onclick="generatePrompt()">Générer mon prompt</button>
+<div class="ai-buttons">
+  <div class="ai active" onclick="selectAI(this)">ChatGPT</div>
+  <div class="ai" onclick="selectAI(this)">Claude</div>
+  <div class="ai" onclick="selectAI(this)">Gemini</div>
+  <div class="ai" onclick="selectAI(this)">Grok</div>
+</div>
+
+<button class="button" onclick="generatePrompt()">Générer mon prompt</button>
 
 <div id="result" class="result"></div>
 
-<button onclick="copyPrompt()">Copier le prompt</button>
+<button class="button copy" onclick="copyPrompt()">Copier le prompt</button>
 
-<!-- UPSELL -->
-<div>
-  <p><strong>Tu veux +400 prompts optimisés ?</strong></p>
-  <a href="/pack" class="cta">Accéder au pack complet</a>
 </div>
 
-<!-- PROBLEME -->
-<h2>Pourquoi ça ne marche pas pour toi ?</h2>
-<p>Sans bons prompts = résultats médiocres.  
-Les bonnes instructions font toute la différence.</p>
+<a href="/pack" class="cta">Accéder au pack complet</a>
 
-<!-- SOLUTION -->
-<h2>La solution</h2>
-<p>Des prompts optimisés pour chaque IA pour obtenir des résultats concrets rapidement.</p>
-
-<!-- OFFRE -->
-<h2>+400 prompts prêts à l’emploi</h2>
-<p>
-✔ Gagner de l’argent  
-✔ Créer du contenu  
-✔ Lancer un business  
-✔ Automatiser tes tâches
-</p>
-
-<a href="/pack" class="cta">Je veux le pack</a>
-
-<!-- PREUVE -->
-<h2>Avis utilisateurs</h2>
-
-<div class="proof">⭐⭐⭐⭐⭐ “Très utile, facile à utiliser.”</div>
-<div class="proof">⭐⭐⭐⭐⭐ “Gain de temps énorme.”</div>
-
-<!-- EMAIL -->
-<h2>10 prompts gratuits</h2>
-<p>Reçois 10 prompts exclusifs directement dans ta boîte mail</p>
-
-<input type="email" placeholder="Ton email" style="width:100%;padding:12px;border-radius:8px;">
-<button>Recevoir les prompts</button>
-
-<!-- SEO CONTENT -->
-<h2>Utiliser l’IA pour générer des revenus</h2>
-<p>
-Les outils comme ChatGPT, Claude ou Gemini permettent aujourd’hui de créer du contenu,
-automatiser des tâches et lancer un business en ligne.  
-Mais sans bons prompts, les résultats restent limités.  
-FlowPrompt propose des prompts optimisés pour exploiter chaque IA au maximum.
-</p>
-
-<!-- FOOTER -->
-<p style="margin-top:40px;font-size:12px;color:gray;">
-FlowPrompt - Support disponible sous 24h
-</p>
+<p class="small">Support disponible – réponse sous 24h</p>
 
 </div>
 
 <script>
-function generatePrompt() {
-  let input = document.getElementById("input").value;
-  let ai = document.getElementById("ai").value;
+let selectedAI = "ChatGPT";
 
-  let prompt = `Agis comme un expert en ${ai} et en intelligence artificielle.
+function selectAI(el){
+  document.querySelectorAll('.ai').forEach(e=>e.classList.remove('active'));
+  el.classList.add('active');
+  selectedAI = el.innerText;
+}
+
+function generatePrompt(){
+  let input = document.getElementById("input").value;
+
+  if(!input){
+    alert("Ajoute une demande");
+    return;
+  }
+
+  let prompt = `Agis comme un expert en ${selectedAI}.
 
 ${input}
 
@@ -177,9 +181,10 @@ Donne une réponse claire, structurée et exploitable immédiatement.`;
   document.getElementById("result").innerText = prompt;
 }
 
-function copyPrompt() {
+function copyPrompt(){
   let text = document.getElementById("result").innerText;
   navigator.clipboard.writeText(text);
+  alert("Prompt copié !");
 }
 </script>
 
