@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>FlowPrompt — Prompts IA optimisés pour générer des revenus</title>
+  <meta name="description" content="FlowPrompt — La référence des prompts IA en français. Générateur gratuit, 400+ prompts testés pour ChatGPT, Claude, Gemini et Grok. Gagne de l'argent avec l'IA."/>
+  <meta name="keywords" content="prompts IA, ChatGPT prompts français, gagner argent IA, générateur prompts, pack prompts IA 2026"/>
+  <link rel="canonical" href="https://flowprompt.fr/"/>
+  <meta name="trustpilot-one-time-domain-verification-id" content="ecd5510c-494f-48ca-ab1e-52eae11e24ce"/>
+  <meta property="og:title" content="FlowPrompt — Prompts IA pour générer des revenus"/>
+  <meta property="og:description" content="Générateur gratuit + 400 prompts testés pour ChatGPT, Claude, Gemini et Grok."/>
+  <meta property="og:url" content="https://flowprompt.fr/"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FlowPrompt","url":"https://flowprompt.fr","description":"La référence des prompts IA en français","publisher":{"@type":"Organization","name":"FlowPrompt"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3416521083881352" crossorigin="anonymous"></script>
+  <style>
+    :root{
+      --bg:#0d0d0f;
+      --bg2:#141416;
+      --bg3:#1a1a1d;
+      --purple:#7c5cfc;
+      --purple-light:#9d82fd;
+      --purple-dim:rgba(124,92,252,0.15);
+      --purple-border:rgba(124,92,252,0.3);
+      --gold:#f5a623;
+      --gold-dim:rgba(245,166,35,0.15);
+      --green:#22c55e;
+      --green-dim:rgba(34,197,94,0.12);
+      --white:#f0f0f5;
+      --muted:rgba(240,240,245,0.45);
+      --border:rgba(255,255,255,0.08);
+      --card:rgba(255,255,255,0.04);
+      --nav-h:64px;
+      --bottom-h:72px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;padding-bottom:var(--bottom-h)}
+
+    /* ===== TOP NAV ===== */
+    .topnav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(13,13,15,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .topnav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--purple),#5b3fd4);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px}
+    .logo-text{font-size:17px;font-weight:700;color:var(--white);letter-spacing:-0.3px}
+    .topnav-badge{font-family:'Space Mono',monospace;font-size:9px;background:var(--purple-dim);border:1px solid var(--purple-border);color:var(--purple-light);padding:3px 8px;border-radius:20px;letter-spacing:0.05em;text-transform:uppercase}
+    .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:transparent;border:none}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+    /* ===== SIDE MENU ===== */
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:200;display:none;backdrop-filter:blur(4px)}
+    .overlay.open{display:block}
+    .sidemenu{position:fixed;top:0;right:-100%;width:82%;max-width:300px;height:100%;background:var(--bg2);z-index:300;transition:right 0.35s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;overflow-y:auto}
+    .sidemenu.open{right:0}
+    .sidemenu-head{padding:20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:var(--bg2);position:sticky;top:0;z-index:10}
+    .sidemenu-logo{display:flex;align-items:center;gap:10px}
+    .sidemenu-close{color:var(--muted);font-size:22px;cursor:pointer;padding:4px;background:none;border:none;color:var(--white)}
+    .sidemenu-section{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple-light);padding:18px 20px 8px}
+    .sidemenu a{display:flex;align-items:center;gap:12px;padding:14px 20px;color:var(--white);text-decoration:none;font-size:15px;font-weight:400;border-bottom:1px solid rgba(255,255,255,0.04);transition:background 0.2s}
+    .sidemenu a:active{background:var(--purple-dim)}
+    .sidemenu-cta{margin:20px;background:linear-gradient(135deg,var(--purple),#5b3fd4);color:white;padding:16px;border-radius:12px;text-align:center;text-decoration:none;font-weight:600;font-size:15px;display:block}
+
+    /* ===== BOTTOM NAV ===== */
+    .bottomnav{position:fixed;bottom:0;left:0;right:0;z-index:100;height:var(--bottom-h);background:rgba(13,13,15,0.98);backdrop-filter:blur(20px);border-top:1px solid var(--border);display:flex;align-items:center;padding-bottom:env(safe-area-inset-bottom)}
+    .bottomnav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px 0;cursor:pointer;text-decoration:none;color:var(--muted);transition:color 0.2s;border:none;background:none;font-family:'Space Grotesk',sans-serif}
+    .bottomnav-item.active,.bottomnav-item:active{color:var(--purple-light)}
+    .bottomnav-icon{font-size:20px;line-height:1}
+    .bottomnav-label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.05em;text-transform:uppercase}
+    .bottomnav-item.active .bottomnav-icon{filter:drop-shadow(0 0 6px var(--purple))}
+
+    /* ===== PAGES ===== */
+    .page{display:none;padding-top:var(--nav-h);min-height:100vh}
+    .page.active{display:block}
+
+    /* ===== PAGE ACCUEIL ===== */
+    .hero{padding:36px 20px 28px;background:linear-gradient(180deg,rgba(124,92,252,0.08) 0%,transparent 100%)}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--purple-dim);border:1px solid var(--purple-border);color:var(--purple-light);font-family:'Space Mono',monospace;font-size:9px;padding:5px 12px;border-radius:20px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px}
+    .hero h1{font-size:32px;font-weight:700;line-height:1.15;margin-bottom:14px;letter-spacing:-0.5px}
+    .hero h1 span{color:var(--purple-light)}
+    .hero-sub{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:20px;max-width:360px}
+    .hero-checks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .hero-check{display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(240,240,245,0.65)}
+    .hero-check::before{content:'✓';color:var(--green);font-weight:700;font-size:13px}
+    .hero-btns{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+    .btn-main{background:linear-gradient(135deg,var(--purple),#5b3fd4);color:white;padding:16px 24px;border-radius:12px;font-weight:600;font-size:15px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer;width:100%;font-family:'Space Grotesk',sans-serif}
+    .btn-main:active{opacity:0.9}
+    .btn-outline{background:transparent;color:var(--white);padding:15px 24px;border-radius:12px;border:1px solid var(--border);font-size:15px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;width:100%;font-family:'Space Grotesk',sans-serif;cursor:pointer}
+    .hero-social{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+    .stars-row{color:var(--gold);font-size:14px;letter-spacing:1px}
+    .hero-mockup{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:20px;margin:28px 0;position:relative;overflow:hidden}
+    .hero-mockup::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),var(--purple-light),transparent)}
+    .mockup-label{font-family:'Space Mono',monospace;font-size:9px;color:var(--purple-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px}
+    .mockup-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .mockup-stat{text-align:center}
+    .mockup-stat-num{font-size:24px;font-weight:700;color:var(--white);line-height:1}
+    .mockup-stat-label{font-size:11px;color:var(--muted);margin-top:3px}
+
+    /* SECTIONS */
+    .section{padding:28px 20px}
+    .section-head{margin-bottom:20px}
+    .section-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple-light);margin-bottom:8px;display:block}
+    .section-title{font-size:24px;font-weight:700;line-height:1.2;letter-spacing:-0.3px}
+    .section-title span{color:var(--purple-light)}
+    .section-sub{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.7}
+    .divider{height:1px;background:var(--border);margin:0 20px}
+
+    /* CARDS */
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;transition:border-color 0.2s}
+    .card:active{border-color:var(--purple-border)}
+    .card-grid{display:grid;grid-template-columns:1fr;gap:10px}
+
+    /* FEATURE CARDS */
+    .feat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;gap:14px;align-items:flex-start}
+    .feat-icon{font-size:28px;flex-shrink:0;width:48px;height:48px;background:var(--purple-dim);border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .feat-title{font-size:15px;font-weight:600;margin-bottom:4px}
+    .feat-desc{font-size:13px;color:var(--muted);line-height:1.6}
+
+    /* IA SELECTOR */
+    .ia-selector{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+    .ia-btn{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 6px;text-align:center;cursor:pointer;transition:all 0.2s;font-size:11px;color:var(--muted);font-family:'Space Grotesk',sans-serif;font-weight:500}
+    .ia-btn .ia-logo{font-size:22px;display:block;margin-bottom:4px}
+    .ia-btn.selected{background:var(--purple-dim);border-color:var(--purple-light);color:var(--purple-light)}
+    .ia-btn:active{opacity:0.8}
+
+    /* PACKS */
+    .pack-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;position:relative;overflow:hidden}
+    .pack-card.featured{border-color:var(--purple-border);background:rgba(124,92,252,0.06)}
+    .pack-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:transparent}
+    .pack-card.featured::before{background:linear-gradient(90deg,var(--purple),var(--purple-light))}
+    .pack-badge{display:inline-block;background:var(--purple);color:white;font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;margin-bottom:12px;font-family:'Space Mono',monospace;letter-spacing:0.05em}
+    .pack-badge.hot{background:linear-gradient(90deg,#f5a623,#f0620f)}
+    .pack-icon{font-size:32px;margin-bottom:10px}
+    .pack-title{font-size:18px;font-weight:700;margin-bottom:6px;letter-spacing:-0.2px}
+    .pack-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+    .pack-features{list-style:none;margin-bottom:16px}
+    .pack-features li{font-size:13px;color:rgba(240,240,245,0.7);padding:4px 0;display:flex;align-items:center;gap:7px;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .pack-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:12px;flex-shrink:0}
+    .pack-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:14px}
+    .pack-price{font-size:32px;font-weight:700;color:var(--white)}
+    .pack-price-old{font-size:16px;color:var(--muted);text-decoration:line-through}
+    .pack-discount{background:var(--gold-dim);color:var(--gold);font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;font-family:'Space Mono',monospace}
+    .pack-cta{display:block;background:linear-gradient(135deg,var(--purple),#5b3fd4);color:white;padding:15px;border-radius:12px;text-align:center;text-decoration:none;font-weight:600;font-size:15px;transition:opacity 0.2s}
+    .pack-cta:active{opacity:0.85}
+    .pack-cta.outline{background:transparent;border:1px solid var(--purple-border);color:var(--purple-light)}
+    .pack-trust{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;font-size:11px;color:var(--muted)}
+
+    /* TESTI */
+    .testi-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+    .testi-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:10px}
+    .testi-text{font-size:14px;color:rgba(240,240,245,0.75);line-height:1.7;margin-bottom:14px;font-style:italic}
+    .testi-author{display:flex;align-items:center;gap:10px}
+    .testi-avatar{width:32px;height:32px;border-radius:50%;background:var(--purple-dim);border:1px solid var(--purple-border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--purple-light);flex-shrink:0}
+    .testi-name{font-size:13px;font-weight:600}
+    .testi-role{font-size:11px;color:var(--muted)}
+
+    /* EMAIL CAPTURE */
+    .email-box{background:linear-gradient(135deg,rgba(124,92,252,0.12),rgba(124,92,252,0.04));border:1px solid var(--purple-border);border-radius:16px;padding:24px 20px}
+    .email-title{font-size:20px;font-weight:700;line-height:1.2;margin-bottom:6px;letter-spacing:-0.2px}
+    .email-title span{color:var(--purple-light)}
+    .email-sub{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+    .email-form{display:flex;flex-direction:column;gap:10px}
+    .email-input{background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:10px;padding:14px 16px;color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:15px;outline:none;width:100%;transition:border-color 0.2s}
+    .email-input:focus{border-color:var(--purple-light)}
+    .email-input::placeholder{color:var(--muted)}
+    .email-note{font-size:11px;color:var(--muted);text-align:center;margin-top:4px}
+
+    /* FAQ */
+    .faq-item{border-bottom:1px solid var(--border)}
+    .faq-item summary{list-style:none;padding:16px 0;font-size:15px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--white)}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-icon{color:var(--purple-light);font-size:18px;transition:transform 0.3s;flex-shrink:0}
+    .faq-item[open] .faq-icon{transform:rotate(45deg)}
+    .faq-item[open] summary{color:var(--purple-light)}
+    .faq-answer{padding:0 0 16px;font-size:14px;color:var(--muted);line-height:1.7}
+
+    /* BLOG CARDS */
+    .blog-card{background:var(--card);border:1px solid var(--border);border-radius:14px;text-decoration:none;color:inherit;display:block;overflow:hidden}
+    .blog-card:active{border-color:var(--purple-border)}
+    .blog-img{background:linear-gradient(135deg,var(--purple-dim),rgba(124,92,252,0.02));display:flex;align-items:center;justify-content:center;font-size:40px;height:110px;border-bottom:1px solid var(--border)}
+    .blog-body{padding:16px}
+    .blog-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple-light);margin-bottom:6px;display:block}
+    .blog-title{font-size:15px;font-weight:600;line-height:1.3;margin-bottom:6px;letter-spacing:-0.2px}
+    .blog-excerpt{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px}
+    .blog-link{font-family:'Space Mono',monospace;font-size:10px;color:var(--purple-light);letter-spacing:0.05em}
+
+    /* ===== PAGE GÉNÉRATEUR ===== */
+    .gen-page{padding:var(--nav-h) 0 0}
+    .gen-header{padding:20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;background:var(--bg)}
+    .gen-header-back{color:var(--muted);text-decoration:none;font-size:20px;padding:4px}
+    .gen-header-title{font-size:16px;font-weight:600;flex:1;text-align:center}
+    .gen-header-settings{font-size:20px;color:var(--muted)}
+    .gen-body{padding:20px}
+    .gen-step{margin-bottom:24px}
+    .gen-step-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--purple);border-radius:50%;font-size:12px;font-weight:700;color:white;margin-right:8px;vertical-align:middle}
+    .gen-step-label{font-size:14px;font-weight:600;color:var(--white);display:inline-block;vertical-align:middle;margin-bottom:10px}
+    .gen-step-sub{font-size:12px;color:var(--muted);margin-top:2px;margin-bottom:10px;margin-left:32px}
+    .gen-textarea{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:15px;resize:none;outline:none;min-height:120px;transition:border-color 0.2s;line-height:1.6}
+    .gen-textarea:focus{border-color:var(--purple-light)}
+    .gen-textarea::placeholder{color:var(--muted)}
+    .gen-char-count{font-size:11px;color:var(--muted);text-align:right;margin-top:4px;font-family:'Space Mono',monospace}
+    .gen-obj-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .gen-obj-btn{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;text-align:left;cursor:pointer;transition:all 0.2s;font-family:'Space Grotesk',sans-serif;color:var(--muted);font-size:13px;display:flex;align-items:center;gap:8px}
+    .gen-obj-btn .obj-icon{font-size:18px}
+    .gen-obj-btn.selected{background:var(--purple-dim);border-color:var(--purple-light);color:var(--white)}
+    .gen-generate-btn{width:100%;padding:17px;background:linear-gradient(135deg,var(--purple),#5b3fd4);color:white;border:none;border-radius:12px;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity 0.2s;margin-top:8px}
+    .gen-generate-btn:active{opacity:0.85}
+    .gen-generate-btn:disabled{opacity:0.5;cursor:not-allowed}
+    .gen-trust{display:flex;justify-content:center;gap:20px;margin-top:12px}
+    .gen-trust-item{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--muted)}
+    .gen-trust-item::before{content:'✓';color:var(--green);font-weight:700}
+    .gen-result-box{background:var(--bg2);border:1px solid var(--purple-border);border-radius:14px;padding:20px;margin-top:20px;display:none;position:relative}
+    .gen-result-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),var(--purple-light));border-radius:14px 14px 0 0}
+    .gen-result-label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple-light);margin-bottom:12px}
+    .gen-result-text{font-size:14px;color:var(--white);line-height:1.8;white-space:pre-wrap;word-break:break-word}
+    .gen-result-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+    .gen-action-btn{padding:12px;border-radius:10px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;border:none;transition:all 0.2s}
+    .gen-action-btn.copy{background:var(--green-dim);color:var(--green);border:1px solid rgba(34,197,94,0.3)}
+    .gen-action-btn.regen{background:var(--purple-dim);color:var(--purple-light);border:1px solid var(--purple-border)}
+    .gen-upsell{background:linear-gradient(135deg,rgba(245,166,35,0.1),rgba(245,166,35,0.04));border:1px solid rgba(245,166,35,0.25);border-radius:14px;padding:18px;margin-top:16px;display:none}
+    .gen-upsell-title{font-size:14px;font-weight:600;color:var(--gold);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+    .gen-upsell-desc{font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.6}
+    .gen-loading{text-align:center;padding:32px 20px;display:none}
+    .gen-loading-dots{display:flex;justify-content:center;gap:6px;margin-bottom:12px}
+    .gen-loading-dot{width:8px;height:8px;background:var(--purple);border-radius:50%;animation:dotpulse 1.4s ease infinite}
+    .gen-loading-dot:nth-child(2){animation-delay:0.2s}
+    .gen-loading-dot:nth-child(3){animation-delay:0.4s}
+    .gen-loading-text{font-size:14px;color:var(--muted)}
+
+    /* ===== PAGE PROMPTS ===== */
+    .prompts-filters{display:flex;gap:8px;overflow-x:auto;padding:16px 20px 8px;scrollbar-width:none;-ms-overflow-style:none}
+    .prompts-filters::-webkit-scrollbar{display:none}
+    .filter-chip{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:7px 14px;font-size:12px;color:var(--muted);white-space:nowrap;cursor:pointer;transition:all 0.2s;font-family:'Space Grotesk',sans-serif;font-weight:500}
+    .filter-chip.active{background:var(--purple-dim);border-color:var(--purple-light);color:var(--purple-light)}
+    .prompt-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin:0 20px 10px;cursor:pointer;transition:border-color 0.2s}
+    .prompt-item:active{border-color:var(--purple-border)}
+    .prompt-item-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple-light);margin-bottom:6px;display:block}
+    .prompt-item-title{font-size:14px;font-weight:600;margin-bottom:6px;line-height:1.3}
+    .prompt-item-preview{font-size:12px;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .prompt-modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:500;display:none;align-items:flex-end}
+    .prompt-modal.open{display:flex}
+    .prompt-modal-content{background:var(--bg2);border-radius:20px 20px 0 0;padding:24px 20px;width:100%;max-height:80vh;overflow-y:auto}
+    .prompt-modal-handle{width:40px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 20px}
+    .prompt-modal-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple-light);margin-bottom:8px;display:block}
+    .prompt-modal-title{font-size:18px;font-weight:700;margin-bottom:14px}
+    .prompt-modal-text{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;font-size:14px;color:rgba(240,240,245,0.8);line-height:1.8;white-space:pre-wrap;word-break:break-word;margin-bottom:16px}
+    .prompt-modal-copy{width:100%;padding:15px;background:linear-gradient(135deg,var(--purple),#5b3fd4);color:white;border:none;border-radius:12px;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;cursor:pointer}
+
+    /* ===== PAGE PROFIL ===== */
+    .profil-header{padding:28px 20px;text-align:center;border-bottom:1px solid var(--border)}
+    .profil-avatar{width:80px;height:80px;background:linear-gradient(135deg,var(--purple),#5b3fd4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 14px}
+    .profil-name{font-size:20px;font-weight:700;margin-bottom:4px}
+    .profil-sub{font-size:13px;color:var(--muted)}
+    .profil-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:20px 0 0}
+    .profil-stat{background:var(--card);border:1px solid var(--border);padding:16px;text-align:center}
+    .profil-stat-num{font-size:22px;font-weight:700;color:var(--purple-light)}
+    .profil-stat-label{font-size:10px;color:var(--muted);margin-top:2px;font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:0.05em}
+    .profil-menu-item{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border);text-decoration:none;color:var(--white);font-size:15px}
+    .profil-menu-item:active{background:var(--card)}
+    .profil-menu-chevron{color:var(--muted);font-size:16px}
+
+    /* ===== AD SLOTS ===== */
+    .ad-slot{background:var(--card);border:1px solid var(--border);border-radius:10px;height:70px;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.15);margin:0 20px}
+
+    @keyframes dotpulse{0%,80%,100%{opacity:0.3;transform:scale(0.8)}40%{opacity:1;transform:scale(1)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    .page.active > *{animation:fadeUp 0.4s ease forwards}
+  </style>
+</head>
+<body>
+
+<!-- OVERLAY MENU -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- SIDE MENU -->
+<div class="sidemenu" id="sidemenu">
+  <div class="sidemenu-head">
+    <div class="sidemenu-logo">
+      <div class="logo-icon">⚡</div>
+      <span style="font-size:16px;font-weight:700">FlowPrompt</span>
+    </div>
+    <button class="sidemenu-close" onclick="closeMenu()">✕</button>
+  </div>
+  <div>
+    <div class="sidemenu-section">Navigation</div>
+    <a href="#" onclick="showPage('home');closeMenu()">🏠 Accueil</a>
+    <a href="#" onclick="showPage('generateur');closeMenu()">⚡ Générateur de prompt</a>
+    <a href="#" onclick="showPage('prompts');closeMenu()">📋 Bibliothèque de prompts</a>
+    <a href="#" onclick="showPage('pack');closeMenu()">📦 Les packs</a>
+    <div class="sidemenu-section">Apprendre</div>
+    <a href="/blog.html">📚 Blog & Guides</a>
+    <a href="/gagner-argent-chatgpt.html">💸 Gagner de l'argent</a>
+    <a href="/chatgpt-vs-claude-vs-gemini-vs-grok.html">⚔️ Comparatif IA</a>
+    <div class="sidemenu-section">À propos</div>
+    <a href="/a-propos.html">👋 Notre histoire</a>
+    <a href="/contact.html">✉️ Contact</a>
+    <a href="https://fr.trustpilot.com/review/flowprompt.fr" target="_blank">⭐ Avis Trustpilot</a>
+  </div>
+  <a href="#" class="sidemenu-cta" onclick="showPage('pack');closeMenu()">🚀 Voir les packs →</a>
+</div>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <a class="topnav-logo" href="#">
+    <div class="logo-icon">⚡</div>
+    <span class="logo-text">FlowPrompt</span>
+  </a>
+  <span class="topnav-badge">La référence IA 🇫🇷</span>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== PAGE ACCUEIL ===== -->
+<div class="page active" id="page-home">
+
+  <div class="hero">
+    <div class="hero-badge">⚡ La référence des prompts IA en français</div>
+    <h1>Gagne de l'argent<br>avec l'IA grâce à des<br><span>prompts optimisés</span></h1>
+    <p class="hero-sub">Utilise ChatGPT, Claude, Gemini, Grok et toutes les IA pour générer du contenu, lancer ton business et atteindre tes objectifs plus vite.</p>
+    <div class="hero-checks">
+      <span class="hero-check">400+ prompts prêts à l'emploi</span>
+      <span class="hero-check">Optimisés pour chaque IA</span>
+      <span class="hero-check">Résultats concrets</span>
+    </div>
+    <div class="hero-btns">
+      <button class="btn-main" onclick="showPage('pack')">📦 Découvrir le pack →</button>
+      <button class="btn-outline" onclick="showPage('generateur')">⚡ Tester gratuitement</button>
+    </div>
+    <div class="hero-social">
+      <span>Déjà adopté par +500 utilisateurs</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;margin-top:6px">
+      <span class="stars-row">★★★★★</span>
+      <span style="font-size:12px;color:var(--muted)">Noté 4,8/5 sur Trustpilot</span>
+    </div>
+    <div class="hero-mockup">
+      <div class="mockup-label">✦ Statistiques FlowPrompt</div>
+      <div class="mockup-stats">
+        <div class="mockup-stat"><div class="mockup-stat-num">400+</div><div class="mockup-stat-label">Prompts</div></div>
+        <div class="mockup-stat"><div class="mockup-stat-num">1 200+</div><div class="mockup-stat-label">Utilisateurs</div></div>
+        <div class="mockup-stat"><div class="mockup-stat-num">4,8★</div><div class="mockup-stat-label">Note moyenne</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- GÉNÉRATEUR INLINE -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-tag">✦ Outil gratuit</span>
+      <h2 class="section-title">Générateur de<br><span>prompt IA</span></h2>
+      <p class="section-sub">Décris ton besoin et obtiens un prompt optimisé prêt à copier pour ton IA préférée.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--purple-border);border-radius:16px;padding:20px;position:relative;overflow:hidden">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),var(--purple-light))"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <span style="font-size:15px;font-weight:600">Générateur de prompt IA</span>
+        <span style="background:var(--green-dim);color:var(--green);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;font-family:'Space Mono',monospace">GRATUIT</span>
+      </div>
+      <textarea class="gen-textarea" id="homeIdea" placeholder="Ex : Trouve 10 idées de business rentables en ligne avec peu d'investissement en utilisant l'IA." rows="4" style="min-height:100px"></textarea>
+      <div style="margin:12px 0 8px;font-size:12px;color:var(--muted);font-weight:500">Choisis ton IA</div>
+      <div class="ia-selector" id="homeIA">
+        <div class="ia-btn selected" data-ia="ChatGPT"><span class="ia-logo">🟢</span>ChatGPT</div>
+        <div class="ia-btn" data-ia="Claude"><span class="ia-logo">🟡</span>Claude</div>
+        <div class="ia-btn" data-ia="Gemini"><span class="ia-logo">🔵</span>Gemini</div>
+        <div class="ia-btn" data-ia="Grok"><span class="ia-logo">⚫</span>Grok</div>
+      </div>
+      <button class="btn-main" id="homeGenBtn" onclick="generateHome()" style="margin-top:12px">⚡ Générer mon prompt ✨</button>
+      <div class="gen-trust" style="margin-top:10px">
+        <span class="gen-trust-item">100% gratuit</span>
+        <span class="gen-trust-item">Sans inscription</span>
+        <span class="gen-trust-item">Résultat instantané</span>
+      </div>
+      <div class="gen-loading" id="homeLoading">
+        <div class="gen-loading-dots"><div class="gen-loading-dot"></div><div class="gen-loading-dot"></div><div class="gen-loading-dot"></div></div>
+        <div class="gen-loading-text">Génération de ton prompt...</div>
+      </div>
+      <div class="gen-result-box" id="homeResult">
+        <div class="gen-result-label">✦ Ton prompt optimisé</div>
+        <div class="gen-result-text" id="homeResultText"></div>
+        <div class="gen-result-actions">
+          <button class="gen-action-btn copy" id="homeCopy">📋 Copier</button>
+          <button class="gen-action-btn regen" onclick="generateHome()">🔄 Regénérer</button>
+        </div>
+      </div>
+      <div class="gen-upsell" id="homeUpsell">
+        <div class="gen-upsell-title">🎁 Besoin d'aller plus loin ?</div>
+        <div class="gen-upsell-desc">Accède à +400 prompts optimisés pour tous tes besoins business, marketing, contenu et plus encore.</div>
+        <button class="btn-main" onclick="showPage('pack')" style="font-size:14px;padding:13px">📦 Découvrir le pack complet →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FEATURES -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-tag">✦ Fonctionnalités</span>
+      <h2 class="section-title">Pourquoi choisir<br><span>FlowPrompt ?</span></h2>
+    </div>
+    <div class="card-grid">
+      <div class="feat-card"><div class="feat-icon">⚡</div><div><div class="feat-title">Générateur simple & rapide</div><div class="feat-desc">3 étapes claires pour obtenir un prompt optimisé en quelques secondes.</div></div></div>
+      <div class="feat-card"><div class="feat-icon">🤖</div><div><div class="feat-title">Choix multi-IA</div><div class="feat-desc">Compatible avec ChatGPT, Claude, Gemini, Grok et plus encore.</div></div></div>
+      <div class="feat-card"><div class="feat-icon">🎯</div><div><div class="feat-title">Résultat optimisé</div><div class="feat-desc">Prompt prêt à l'emploi, optimisé pour l'IA sélectionnée.</div></div></div>
+      <div class="feat-card"><div class="feat-icon">📋</div><div><div class="feat-title">Action rapide</div><div class="feat-desc">Boutons pour copier ou regénérer le prompt facilement.</div></div></div>
+      <div class="feat-card"><div class="feat-icon">💰</div><div><div class="feat-title">Upsell naturel</div><div class="feat-desc">Invitation à découvrir le pack complet juste après utilisation.</div></div></div>
+      <div class="feat-card"><div class="feat-icon">📱</div><div><div class="feat-title">Navigation mobile</div><div class="feat-desc">Menu bas fixe pour un accès rapide aux sections principales.</div></div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BLOG -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-tag">✦ Guides & Articles</span>
+      <h2 class="section-title">Apprends à utiliser<br><span>l'IA gratuitement</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr;gap:10px">
+      <a href="/blog.html" class="blog-card"><div class="blog-img">🧠</div><div class="blog-body"><span class="blog-tag">Débutants · 8 min</span><div class="blog-title">Les 20 meilleurs prompts IA pour débutants</div><div class="blog-excerpt">Les formules qui fonctionnent vraiment, les erreurs à éviter.</div><div class="blog-link">Lire le guide →</div></div></a>
+      <a href="/gagner-argent-chatgpt.html" class="blog-card"><div class="blog-img">💸</div><div class="blog-body"><span class="blog-tag">Business · 15 min</span><div class="blog-title">Comment gagner de l'argent avec ChatGPT en 2026</div><div class="blog-excerpt">10 méthodes concrètes avec revenus estimés et étapes détaillées.</div><div class="blog-link">Découvrir les méthodes →</div></div></a>
+      <a href="/chatgpt-vs-claude-vs-gemini-vs-grok.html" class="blog-card"><div class="blog-img">⚔️</div><div class="blog-body"><span class="blog-tag">Comparatif · 15 min</span><div class="blog-title">ChatGPT vs Claude vs Gemini vs Grok — comparatif 2026</div><div class="blog-excerpt">3 mois de tests. Verdict honnête pour chaque usage.</div><div class="blog-link">Lire le comparatif →</div></div></a>
+    </div>
+    <a href="/blog.html" style="display:block;text-align:center;margin-top:14px;color:var(--purple-light);font-size:14px;font-weight:500;text-decoration:none">Voir tous les articles →</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TÉMOIGNAGES -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-tag">✦ Avis clients</span>
+      <h2 class="section-title">Ils en parlent<br><span>mieux que nous</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr;gap:10px">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><div class="testi-text">"Incroyable ! Ces prompts m'ont fait gagner un temps fou et m'ont aidé à booster mon business."</div><div class="testi-author"><div class="testi-avatar">TD</div><div><div class="testi-name">Thomas D.</div><div class="testi-role">Entrepreneur digital · Lyon</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><div class="testi-text">"Les résultats sont bluffants avec chaque IA. Je recommande à 100% !"</div><div class="testi-author"><div class="testi-avatar">SL</div><div><div class="testi-name">Sarah L.</div><div class="testi-role">Créatrice de contenu · Paris</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><div class="testi-text">"Le meilleur investissement que j'ai fait pour mon activité en ligne."</div><div class="testi-author"><div class="testi-avatar">JM</div><div><div class="testi-name">Julien M.</div><div class="testi-role">Vendeur Etsy · Bordeaux</div></div></div></div>
+    </div>
+    <a href="https://fr.trustpilot.com/review/flowprompt.fr" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;background:rgba(0,177,72,0.1);border:1px solid rgba(0,177,72,0.3);border-radius:10px;padding:12px;text-decoration:none;color:var(--green);font-size:13px;font-weight:600">
+      ★ Voir tous les avis sur Trustpilot ↗
+    </a>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- EMAIL CAPTURE -->
+  <div class="section">
+    <div class="email-box">
+      <div class="email-title">10 prompts offerts<br><span>pour commencer</span></div>
+      <div class="email-sub">Reçois 10 prompts exclusifs et des conseils pour tirer le maximum de l'IA, directement dans ta boîte mail.</div>
+      <div class="email-form">
+        <input type="email" class="email-input" id="emailCapture" placeholder="Ton email" />
+        <button class="btn-main" onclick="handleEmail()">📨 Recevoir les prompts</button>
+      </div>
+      <div class="email-note">🔒 Aucun spam. Désinscription en 1 clic.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-tag">✦ FAQ</span>
+      <h2 class="section-title">Questions<br><span>fréquemment posées</span></h2>
+    </div>
+    <details class="faq-item"><summary>À quelles IA ces prompts sont-ils adaptés ? <span class="faq-icon">+</span></summary><div class="faq-answer">Nos prompts fonctionnent avec toutes les grandes IA : ChatGPT (version gratuite et payante), Claude, Gemini, Grok, et Mistral. La plupart sont compatibles avec n'importe quelle IA basée sur un LLM.</div></details>
+    <details class="faq-item"><summary>Est-ce que je reçois les mises à jour ? <span class="faq-icon">+</span></summary><div class="faq-answer">Oui, toutes les mises à jour futures sont incluses dans ton achat. Tu recevras un email dès qu'une nouvelle version est disponible avec un lien de téléchargement.</div></details>
+    <details class="faq-item"><summary>Puis-je obtenir un remboursement ? <span class="faq-icon">+</span></summary><div class="faq-answer">Oui, nous offrons une garantie satisfait ou remboursé de 7 jours sans condition. Si tu n'es pas satisfait, on te rembourse intégralement — sans question.</div></details>
+    <details class="faq-item"><summary>Comment accéder au pack ? <span class="faq-icon">+</span></summary><div class="faq-answer">Après ton paiement via Gumroad, tu reçois un email avec un lien de téléchargement en moins de 2 minutes. Le pack est au format PDF et TXT, compatible avec tous les appareils.</div></details>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:var(--bg2);border-top:1px solid var(--border);padding:28px 20px;margin-top:8px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+      <div class="logo-icon">⚡</div>
+      <div>
+        <div style="font-size:15px;font-weight:700">FlowPrompt</div>
+        <div style="font-size:11px;color:var(--muted)">Des prompts optimisés pour toutes les IA et des résultats concrets.</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px">
+      <div>
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--purple-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Liens utiles</div>
+        <a href="#" onclick="showPage('home')" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Accueil</a>
+        <a href="#" onclick="showPage('prompts')" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Prompts</a>
+        <a href="#" onclick="showPage('generateur')" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Fonctionnalités</a>
+        <a href="https://fr.trustpilot.com/review/flowprompt.fr" target="_blank" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Avis</a>
+        <a href="/blog.html" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Blog</a>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--purple-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Ressources</div>
+        <a href="/blog.html" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Guide IA</a>
+        <a href="/blog.html" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Tutoriels</a>
+        <a href="/chatgpt-vs-claude-vs-gemini-vs-grok.html" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Exemples de prompts</a>
+        <a href="/gagner-argent-chatgpt.html" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Mises à jour</a>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--purple-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Besoin d'aide ?</div>
+        <a href="/contact.html" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">Contactez-nous</a>
+        <a href="mailto:flowprompt.contact@gmail.com" style="display:block;font-size:12px;color:var(--muted);text-decoration:none;padding:3px 0">flowprompt.contact@gmail.com</a>
+        <span style="display:block;font-size:12px;color:var(--muted);padding:3px 0">Réponse sous 24h</span>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--border);padding-top:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center">
+      <span style="font-size:11px;color:var(--muted)">© 2026 FlowPrompt. Tous droits réservés.</span>
+      <a href="/mentions-legales.html" style="font-size:11px;color:var(--muted);text-decoration:none">Mentions légales</a>
+      <a href="/cgv.html" style="font-size:11px;color:var(--muted);text-decoration:none">CGV</a>
+      <a href="/politique-confidentialite.html" style="font-size:11px;color:var(--muted);text-decoration:none">Confidentialité</a>
+    </div>
+  </div>
+
+</div><!-- end page-home -->
+
+<!-- ===== PAGE GÉNÉRATEUR ===== -->
+<div class="page" id="page-generateur">
+  <div class="gen-page">
+    <div class="gen-header">
+      <button class="gen-header-back" onclick="showPage('home')">←</button>
+      <div class="gen-header-title">GÉNÉRATEUR DE PROMPT</div>
+      <span class="gen-header-settings">⚙️</span>
+    </div>
+    <div class="gen-body">
+      <div class="gen-step">
+        <span class="gen-step-num">1</span>
+        <span class="gen-step-label">Décris ton besoin</span>
+        <div class="gen-step-sub">Plus tu es précis, meilleur sera le prompt.</div>
+        <textarea class="gen-textarea" id="genIdea" placeholder="Trouve 10 idées de business rentables en ligne avec peu d'investissement en utilisant l'IA." rows="5" oninput="document.getElementById('charCount').textContent=this.value.length+'/1000'"></textarea>
+        <div class="gen-char-count" id="charCount">0/1000</div>
+      </div>
+
+      <div class="gen-step">
+        <span class="gen-step-num">2</span>
+        <span class="gen-step-label">Choisis ton IA</span>
+        <div class="ia-selector" id="genIA">
+          <div class="ia-btn selected" data-ia="ChatGPT"><span class="ia-logo">🟢</span>ChatGPT</div>
+          <div class="ia-btn" data-ia="Claude"><span class="ia-logo">🟡</span>Claude</div>
+          <div class="ia-btn" data-ia="Gemini"><span class="ia-logo">🔵</span>Gemini</div>
+          <div class="ia-btn" data-ia="Grok"><span class="ia-logo">⚫</span>Grok</div>
+        </div>
+      </div>
+
+      <div class="gen-step">
+        <span class="gen-step-num">3</span>
+        <span class="gen-step-label">Objectif</span>
+        <div class="gen-obj-grid" id="genObj">
+          <button class="gen-obj-btn selected" data-obj="contenu"><span class="obj-icon">🎯</span>Créer du contenu</button>
+          <button class="gen-obj-btn" data-obj="vendre"><span class="obj-icon">💰</span>Vendre</button>
+          <button class="gen-obj-btn" data-obj="ecrire"><span class="obj-icon">✍️</span>Écrire</button>
+          <button class="gen-obj-btn" data-obj="apprendre"><span class="obj-icon">🧠</span>Apprendre</button>
+          <button class="gen-obj-btn" data-obj="analyser"><span class="obj-icon">📊</span>Analyser</button>
+          <button class="gen-obj-btn" data-obj="automatiser"><span class="obj-icon">⚡</span>Automatiser</button>
+        </div>
+      </div>
+
+      <button class="gen-generate-btn" id="genBtn" onclick="generatePrompt()">⚡ Générer mon prompt ✨</button>
+      <div class="gen-trust">
+        <span class="gen-trust-item">100% gratuit</span>
+        <span class="gen-trust-item">Sans inscription</span>
+        <span class="gen-trust-item">Résultat instantané</span>
+      </div>
+
+      <div class="gen-loading" id="genLoading">
+        <div class="gen-loading-dots"><div class="gen-loading-dot"></div><div class="gen-loading-dot"></div><div class="gen-loading-dot"></div></div>
+        <div class="gen-loading-text">Génération de ton prompt optimisé...</div>
+      </div>
+
+      <div class="gen-result-box" id="genResult">
+        <div class="gen-result-label">✦ Ton prompt optimisé</div>
+        <div class="gen-result-text" id="genResultText"></div>
+        <div class="gen-result-actions">
+          <button class="gen-action-btn copy" id="genCopy">📋 Copier</button>
+          <button class="gen-action-btn regen" onclick="generatePrompt()">🔄 Regénérer</button>
+        </div>
+      </div>
+
+      <div class="gen-upsell" id="genUpsell">
+        <div class="gen-upsell-title">🎁 Besoin d'aller plus loin ?</div>
+        <div class="gen-upsell-desc">Accède à +400 prompts optimisés pour tous tes besoins business, marketing, contenu et plus encore.</div>
+        <button class="btn-main" onclick="showPage('pack')" style="font-size:14px;padding:13px">📦 Découvrir le pack complet →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE PROMPTS ===== -->
+<div class="page" id="page-prompts">
+  <div style="padding-top:var(--nav-h)">
+    <div style="padding:20px 20px 8px">
+      <span class="section-tag">✦ Bibliothèque</span>
+      <h2 class="section-title">Exemples de<br><span>prompts gratuits</span></h2>
+    </div>
+    <div class="prompts-filters">
+      <div class="filter-chip active" onclick="filterPrompts('tous')">Tous</div>
+      <div class="filter-chip" onclick="filterPrompts('business')">💼 Business</div>
+      <div class="filter-chip" onclick="filterPrompts('tiktok')">🎵 TikTok</div>
+      <div class="filter-chip" onclick="filterPrompts('instagram')">📱 Instagram</div>
+      <div class="filter-chip" onclick="filterPrompts('ecriture')">✍️ Écriture</div>
+      <div class="filter-chip" onclick="filterPrompts('etsy')">🛍️ Etsy</div>
+    </div>
+    <div id="promptsList">
+      <div class="prompt-item" data-cat="business" onclick="openPrompt('business1')"><span class="prompt-item-tag">💼 Business</span><div class="prompt-item-title">Trouver 10 idées de business rentables avec l'IA</div><div class="prompt-item-preview">Tu es un expert en business en ligne et en intelligence artificielle. Donne-moi 10 idées de business rentables...</div></div>
+      <div class="prompt-item" data-cat="tiktok" onclick="openPrompt('tiktok1')"><span class="prompt-item-tag">🎵 TikTok</span><div class="prompt-item-title">Générer 5 hooks viraux pour TikTok</div><div class="prompt-item-preview">Tu es un expert en contenu viral TikTok. Génère 5 hooks ultra-accrocheurs pour une vidéo sur [sujet]...</div></div>
+      <div class="prompt-item" data-cat="instagram" onclick="openPrompt('insta1')"><span class="prompt-item-tag">📱 Instagram</span><div class="prompt-item-title">Rédiger un post Instagram engageant</div><div class="prompt-item-preview">Tu es un expert en marketing Instagram. Rédige un post engageant pour [type de compte] ciblant [audience]...</div></div>
+      <div class="prompt-item" data-cat="ecriture" onclick="openPrompt('ebook1')"><span class="prompt-item-tag">✍️ Écriture</span><div class="prompt-item-title">Créer la structure d'un ebook en 5 minutes</div><div class="prompt-item-preview">Tu es un auteur expert en ebooks numériques. Crée une table des matières complète pour un ebook sur [sujet]...</div></div>
+      <div class="prompt-item" data-cat="etsy" onclick="openPrompt('etsy1')"><span class="prompt-item-tag">🛍️ Etsy</span><div class="prompt-item-title">Optimiser une fiche produit Etsy pour le SEO</div><div class="prompt-item-preview">Tu es un expert en SEO Etsy. Optimise cette fiche produit [description] pour maximiser la visibilité...</div></div>
+      <div class="prompt-item" data-cat="business" onclick="openPrompt('business2')"><span class="prompt-item-tag">💼 Business</span><div class="prompt-item-title">Créer un plan de lancement en 30 jours</div><div class="prompt-item-preview">Tu es un consultant business expérimenté. Crée un plan de lancement détaillé sur 30 jours pour [produit/service]...</div></div>
+      <div class="prompt-item" data-cat="tiktok" onclick="openPrompt('tiktok2')"><span class="prompt-item-tag">🎵 TikTok</span><div class="prompt-item-title">Script complet pour vidéo TikTok de 60 secondes</div><div class="prompt-item-preview">Tu es un créateur de contenu TikTok expert. Écris un script complet de 60 secondes sur [sujet] avec hook, valeur et CTA...</div></div>
+      <div class="prompt-item" data-cat="ecriture" onclick="openPrompt('email1')"><span class="prompt-item-tag">✍️ Écriture</span><div class="prompt-item-title">Rédiger un email de vente persuasif</div><div class="prompt-item-preview">Tu es un copywriter expert avec 10 ans d'expérience. Rédige un email de vente pour [produit] destiné à [audience]...</div></div>
+    </div>
+    <div style="padding:20px;text-align:center">
+      <div style="background:var(--purple-dim);border:1px solid var(--purple-border);border-radius:14px;padding:20px">
+        <div style="font-size:32px;margin-bottom:8px">📦</div>
+        <div style="font-size:16px;font-weight:600;margin-bottom:6px">Accède à 400+ prompts</div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:14px">Ces 8 prompts ne sont qu'un aperçu. Découvre notre pack complet avec 400+ prompts testés.</div>
+        <button class="btn-main" onclick="showPage('pack')">Voir le pack complet →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PROMPT -->
+<div class="prompt-modal" id="promptModal" onclick="closePromptModal()">
+  <div class="prompt-modal-content" onclick="event.stopPropagation()">
+    <div class="prompt-modal-handle"></div>
+    <span class="prompt-modal-tag" id="modalTag"></span>
+    <div class="prompt-modal-title" id="modalTitle"></div>
+    <div class="prompt-modal-text" id="modalText"></div>
+    <button class="prompt-modal-copy" onclick="copyModal()">📋 Copier ce prompt</button>
+  </div>
+</div>
+
+<!-- ===== PAGE PACK ===== -->
+<div class="page" id="page-pack">
+  <div style="padding-top:var(--nav-h)">
+    <div style="padding:28px 20px 20px;background:linear-gradient(180deg,rgba(124,92,252,0.08) 0%,transparent 100%)">
+      <div class="section-tag">✦ Nos produits</div>
+      <h2 class="section-title" style="font-size:28px">Le pack ultime de<br><span>prompts IA</span></h2>
+      <p class="section-sub" style="margin-top:8px">400+ prompts optimisés pour toutes les IA. Catégories : Business, Marketing, Contenu, Vente...</p>
+    </div>
+
+    <div style="padding:0 20px">
+      <!-- PACK ALL-IN -->
+      <div class="pack-card featured" style="margin-bottom:10px">
+        <div class="pack-badge hot">🔥 Meilleure valeur</div>
+        <div class="pack-icon">📦</div>
+        <div class="pack-title">Pack Complet ALL-IN</div>
+        <div class="pack-desc">Tous les packs réunis — 400+ prompts pour maximiser tes résultats sur tous les canaux.</div>
+        <ul class="pack-features">
+          <li>400+ prompts optimisés pour toutes les IA</li>
+          <li>Catégories : Business, Marketing, Contenu, Vente...</li>
+          <li>Mises à jour régulières incluses</li>
+          <li>Accès à vie</li>
+          <li>Bonus : 10 guides exclusifs offerts</li>
+          <li>Garantie satisfait ou remboursé 7 jours</li>
+        </ul>
+        <div class="pack-price-row">
+          <div class="pack-price">49€</div>
+          <div class="pack-price-old">99€</div>
+          <div class="pack-discount">-52%</div>
+        </div>
+        <a href="https://thomaventure3.gumroad.com/l/ccdqb" target="_blank" class="pack-cta">📦 Accéder au pack maintenant →</a>
+        <div class="pack-trust"><span>🔒 Paiement sécurisé</span><span>•</span><span>⚡ Livraison instantanée</span><span>•</span><span>💰 Garantie 7 jours</span></div>
+      </div>
+
+      <!-- PACKS INDIVIDUELS -->
+      <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin:20px 0 12px">Ou choisir un pack individuel</div>
+
+      <div style="display:grid;grid-template-columns:1fr;gap:10px">
+        <div class="pack-card">
+          <div class="pack-icon">💸</div>
+          <div class="pack-title">Gagner de l'argent avec l'IA</div>
+          <div class="pack-desc">100 prompts pour créer et lancer ton business digital.</div>
+          <div class="pack-price-row"><div class="pack-price" style="font-size:24px">29€</div></div>
+          <a href="https://thomaventure3.gumroad.com/l/gfbii" target="_blank" class="pack-cta outline">Accéder au pack →</a>
+        </div>
+        <div class="pack-card">
+          <div class="pack-icon">🎵</div>
+          <div class="pack-title">TikTok Viral</div>
+          <div class="pack-desc">80 prompts pour exploser ton audience TikTok.</div>
+          <div class="pack-price-row"><div class="pack-price" style="font-size:24px">19€</div></div>
+          <a href="https://thomaventure3.gumroad.com/l/jyzly" target="_blank" class="pack-cta outline">Accéder au pack →</a>
+        </div>
+        <div class="pack-card">
+          <div class="pack-icon">📖</div>
+          <div class="pack-title">Écrire un Ebook</div>
+          <div class="pack-desc">70 prompts pour écrire et vendre ton premier ebook.</div>
+          <div class="pack-price-row"><div class="pack-price" style="font-size:24px">19€</div></div>
+          <a href="https://thomaventure3.gumroad.com/l/ehaxk" target="_blank" class="pack-cta outline">Accéder au pack →</a>
+        </div>
+        <div class="pack-card">
+          <div class="pack-icon">🛍️</div>
+          <div class="pack-title">Marketing Etsy</div>
+          <div class="pack-desc">60 prompts pour booster tes ventes Etsy.</div>
+          <div class="pack-price-row"><div class="pack-price" style="font-size:24px">14€</div></div>
+          <a href="https://thomaventure3.gumroad.com/l/qapks" target="_blank" class="pack-cta outline">Accéder au pack →</a>
+        </div>
+        <div class="pack-card">
+          <div class="pack-icon">📱</div>
+          <div class="pack-title">Contenu Instagram</div>
+          <div class="pack-desc">90 prompts pour développer ton Instagram.</div>
+          <div class="pack-price-row"><div class="pack-price" style="font-size:24px">19€</div></div>
+          <a href="https://thomaventure3.gumroad.com/l/heipln" target="_blank" class="pack-cta outline">Accéder au pack →</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:20px;margin-top:10px">
+      <div class="ad-slot">Publicité — AdSense</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE PROFIL ===== -->
+<div class="page" id="page-profil">
+  <div style="padding-top:var(--nav-h)">
+    <div class="profil-header">
+      <div class="profil-avatar">👤</div>
+      <div class="profil-name">Mon profil</div>
+      <div class="profil-sub">Bienvenue sur FlowPrompt</div>
+      <div class="profil-stats">
+        <div class="profil-stat"><div class="profil-stat-num">0</div><div class="profil-stat-label">Prompts générés</div></div>
+        <div class="profil-stat"><div class="profil-stat-num">0</div><div class="profil-stat-label">Packs achetés</div></div>
+        <div class="profil-stat"><div class="profil-stat-num">0</div><div class="profil-stat-label">Favoris</div></div>
+      </div>
+    </div>
+    <a href="#" onclick="showPage('pack')" class="profil-menu-item">📦 Mes achats <span class="profil-menu-chevron">›</span></a>
+    <a href="/a-propos.html" class="profil-menu-item">👋 À propos de FlowPrompt <span class="profil-menu-chevron">›</span></a>
+    <a href="/contact.html" class="profil-menu-item">✉️ Contacter le support <span class="profil-menu-chevron">›</span></a>
+    <a href="https://fr.trustpilot.com/review/flowprompt.fr" target="_blank" class="profil-menu-item">⭐ Laisser un avis <span class="profil-menu-chevron">›</span></a>
+    <a href="/politique-confidentialite.html" class="profil-menu-item">🔒 Politique de confidentialité <span class="profil-menu-chevron">›</span></a>
+    <a href="/cgv.html" class="profil-menu-item">📄 CGV <span class="profil-menu-chevron">›</span></a>
+    <a href="/mentions-legales.html" class="profil-menu-item">ℹ️ Mentions légales <span class="profil-menu-chevron">›</span></a>
+    <div style="padding:24px 20px;text-align:center">
+      <div style="font-size:12px;color:var(--muted)">FlowPrompt — © 2026 Tous droits réservés</div>
+      <div style="font-size:11px;color:rgba(240,240,245,0.25);margin-top:4px;font-family:'Space Mono',monospace">flowprompt.contact@gmail.com</div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottomnav">
+  <button class="bottomnav-item active" id="nav-home" onclick="showPage('home')">
+    <span class="bottomnav-icon">🏠</span>
+    <span class="bottomnav-label">Accueil</span>
+  </button>
+  <button class="bottomnav-item" id="nav-generateur" onclick="showPage('generateur')">
+    <span class="bottomnav-icon">⚡</span>
+    <span class="bottomnav-label">Générateur</span>
+  </button>
+  <button class="bottomnav-item" id="nav-prompts" onclick="showPage('prompts')">
+    <span class="bottomnav-icon">📋</span>
+    <span class="bottomnav-label">Prompts</span>
+  </button>
+  <button class="bottomnav-item" id="nav-pack" onclick="showPage('pack')">
+    <span class="bottomnav-icon">📦</span>
+    <span class="bottomnav-label">Pack</span>
+  </button>
+  <button class="bottomnav-item" id="nav-profil" onclick="showPage('profil')">
+    <span class="bottomnav-icon">👤</span>
+    <span class="bottomnav-label">Profil</span>
+  </button>
+</nav>
+
+<script>
+// ===== NAVIGATION =====
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.bottomnav-item').forEach(b => b.classList.remove('active'));
+  var page = document.getElementById('page-' + name);
+  var nav = document.getElementById('nav-' + name);
+  if (page) { page.classList.add('active'); window.scrollTo(0,0); }
+  if (nav) nav.classList.add('active');
+}
+
+// ===== MENU =====
+function toggleMenu() {
+  document.getElementById('sidemenu').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+  document.body.style.overflow = document.getElementById('sidemenu').classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu() {
+  document.getElementById('sidemenu').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ===== IA SELECTOR =====
+function setupIASelector(containerId) {
+  var btns = document.querySelectorAll('#' + containerId + ' .ia-btn');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) { b.classList.remove('selected'); });
+      this.classList.add('selected');
+    });
+  });
+}
+setupIASelector('homeIA');
+setupIASelector('genIA');
+
+// ===== OBJ SELECTOR =====
+document.querySelectorAll('#genObj .gen-obj-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('#genObj .gen-obj-btn').forEach(function(b) { b.classList.remove('selected'); });
+    this.classList.add('selected');
+  });
+});
+
+// ===== PROMPT TEMPLATES =====
+var promptTemplates = {
+  'vendre': function(idea, ia) { return 'Tu es un expert en copywriting et persuasion avec 10 ans d\'expérience.\nAide-moi à vendre : "' + idea + '".\n\nRédige un texte de vente percutant qui :\n1. Commence par une accroche qui identifie une douleur forte\n2. Présente clairement les bénéfices (pas les fonctionnalités)\n3. Ajoute un élément de preuve sociale crédible\n4. Termine par un appel à l\'action clair et urgent\n\nTon style : direct, confiant, sans jargon.\nAdapté pour ' + ia + '.'; },
+  'contenu': function(idea, ia) { return 'Tu es un expert en création de contenu viral.\nSujet : "' + idea + '".\n\nGénère :\n1. 5 hooks ultra-accrocheurs (question, chiffre, contraire, curiosité, émotion)\n2. Un script de 60 secondes : hook → valeur → CTA\n3. 10 hashtags pertinents et populaires\n4. Une légende engageante avec question pour booster les commentaires\n\nFormat optimisé pour ' + ia + '.'; },
+  'ecrire': function(idea, ia) { return 'Tu es un rédacteur professionnel expert avec 15 ans d\'expérience.\nSujet : "' + idea + '".\n\nRédige un contenu de qualité professionnelle :\n1. Introduction percutante qui donne envie de lire (problème + promesse)\n2. Développement en 3 parties avec exemples concrets et données\n3. Conclusion mémorable avec message fort\n4. 5 variantes de titre accrocheur\n\nStyle : fluide, précis, engageant.\nAdapté pour ' + ia + '.'; },
+  'apprendre': function(idea, ia) { return 'Tu es un pédagogue expert avec 20 ans d\'expérience en formation.\nSujet : "' + idea + '".\n\nExplique de façon claire et mémorable :\n1. Résumé en 2 phrases simples (niveau débutant absolu)\n2. Une analogie du quotidien pour comprendre intuitivement\n3. Les 5 points essentiels à retenir absolument\n4. Un exercice pratique pour ancrer la connaissance\n5. Les 3 prochaines étapes pour progresser\n\nAdapté pour ' + ia + '.'; },
+  'analyser': function(idea, ia) { return 'Tu es un consultant stratégique senior avec 20 ans d\'expérience.\nMission : analyser "' + idea + '".\n\nAnalyse complète et actionnable :\n1. Diagnostic (forces, faiblesses, opportunités, menaces)\n2. Les 3 leviers prioritaires à activer maintenant\n3. Plan d\'action concret sur 30/60/90 jours\n4. KPIs à suivre pour mesurer le succès\n5. Risques principaux et comment les mitiger\n\nAdapté pour ' + ia + '.'; },
+  'automatiser': function(idea, ia) { return 'Tu es un expert en productivité et automatisation avec 10 ans d\'expérience.\nObjectif : "' + idea + '".\n\nOptimise et automatise au maximum :\n1. Identifie les 5 plus grandes pertes de temps\n2. 5 automatisations concrètes à mettre en place immédiatement\n3. Les meilleurs outils (gratuits et payants) pour chaque étape\n4. Un workflow optimisé étape par étape\n5. Temps gagné estimé par semaine\n\nAdapté pour ' + ia + '.'; }
+};
+
+// ===== HOME GENERATOR =====
+function generateHome() {
+  var idea = document.getElementById('homeIdea').value.trim();
+  if (!idea) { document.getElementById('homeIdea').focus(); document.getElementById('homeIdea').placeholder = '⚠️ Décris ton idée ici...'; return; }
+  var ia = document.querySelector('#homeIA .ia-btn.selected')?.dataset.ia || 'ChatGPT';
+  document.getElementById('homeGenBtn').disabled = true;
+  document.getElementById('homeLoading').style.display = 'block';
+  document.getElementById('homeResult').style.display = 'none';
+  document.getElementById('homeUpsell').style.display = 'none';
+  setTimeout(function() {
+    var prompt = promptTemplates['contenu'](idea, ia);
+    document.getElementById('homeResultText').textContent = prompt;
+    document.getElementById('homeResult').style.display = 'block';
+    document.getElementById('homeUpsell').style.display = 'block';
+    document.getElementById('homeLoading').style.display = 'none';
+    document.getElementById('homeGenBtn').disabled = false;
+  }, 900);
+}
+
+document.getElementById('homeCopy').addEventListener('click', function() {
+  var text = document.getElementById('homeResultText').textContent;
+  navigator.clipboard.writeText(text).then(function() {
+    document.getElementById('homeCopy').textContent = '✓ Copié !';
+    setTimeout(function() { document.getElementById('homeCopy').textContent = '📋 Copier'; }, 2000);
+  });
+});
+
+// ===== FULL GENERATOR =====
+function generatePrompt() {
+  var idea = document.getElementById('genIdea').value.trim();
+  if (!idea) { document.getElementById('genIdea').focus(); return; }
+  var ia = document.querySelector('#genIA .ia-btn.selected')?.dataset.ia || 'ChatGPT';
+  var obj = document.querySelector('#genObj .gen-obj-btn.selected')?.dataset.obj || 'contenu';
+  document.getElementById('genBtn').disabled = true;
+  document.getElementById('genLoading').style.display = 'block';
+  document.getElementById('genResult').style.display = 'none';
+  document.getElementById('genUpsell').style.display = 'none';
+  setTimeout(function() {
+    var prompt = (promptTemplates[obj] || promptTemplates['contenu'])(idea, ia);
+    document.getElementById('genResultText').textContent = prompt;
+    document.getElementById('genResult').style.display = 'block';
+    document.getElementById('genUpsell').style.display = 'block';
+    document.getElementById('genLoading').style.display = 'none';
+    document.getElementById('genBtn').disabled = false;
+  }, 900);
+}
+
+document.getElementById('genCopy').addEventListener('click', function() {
+  var text = document.getElementById('genResultText').textContent;
+  navigator.clipboard.writeText(text).then(function() {
+    document.getElementById('genCopy').textContent = '✓ Copié !';
+    setTimeout(function() { document.getElementById('genCopy').textContent = '📋 Copier'; }, 2000);
+  });
+});
+
+// ===== PROMPTS PAGE =====
+var promptsData = {
+  'business1': {tag:'💼 Business', title:'Trouver 10 idées de business rentables avec l\'IA', text:'Tu es un expert en business en ligne et en intelligence artificielle.\n\nDonne-moi 10 idées de business rentables que je peux lancer en ligne avec peu d\'investissement en utilisant l\'IA pour automatiser ou optimiser certaines tâches.\n\nPour chaque idée, indique :\n- Le concept en une phrase\n- Le potentiel de rentabilité (faible, moyen, élevé)\n- Les outils IA recommandés\n- Les premières étapes pour commencer\n- Le temps estimé avant les premiers revenus'},
+  'tiktok1': {tag:'🎵 TikTok', title:'Générer 5 hooks viraux pour TikTok', text:'Tu es un expert en contenu viral TikTok avec 5 ans d\'expérience.\n\nGénère 5 hooks ultra-accrocheurs pour une vidéo TikTok sur [sujet].\n\nChaque hook doit :\n- Faire moins de 15 mots\n- Créer immédiatement de la curiosité ou de l\'émotion\n- Donner envie de regarder la suite\n- Utiliser une technique différente : question, chiffre, contraire, secret, défi'},
+  'insta1': {tag:'📱 Instagram', title:'Rédiger un post Instagram engageant', text:'Tu es un expert en marketing Instagram pour [type de compte].\n\nRédige un post Instagram engageant pour [sujet] ciblant [audience].\n\nInclus :\n- Une accroche émotionnelle sur la première ligne\n- 2-3 phrases de développement avec valeur concrète\n- Un appel à l\'action clair\n- 15 hashtags pertinents (5 grands, 5 moyens, 5 petits)\n- Une question pour booster les commentaires\n\nTon : [chaleureux/professionnel/inspirant]'},
+  'ebook1': {tag:'✍️ Écriture', title:'Créer la structure d\'un ebook en 5 minutes', text:'Tu es un auteur expert en ebooks numériques et en marketing de contenu.\n\nCrée une table des matières complète et détaillée pour un ebook sur [sujet] destiné à [audience cible].\n\nL\'ebook doit :\n- Faire 50-70 pages\n- Avoir 8-10 chapitres\n- Chaque chapitre avec 3-4 sous-parties\n- Un exercice pratique par chapitre\n- Une introduction percutante\n- Une conclusion avec appel à l\'action\n\nPropose aussi 5 titres accrocheurs pour l\'ebook.'},
+  'etsy1': {tag:'🛍️ Etsy', title:'Optimiser une fiche produit Etsy pour le SEO', text:'Tu es un expert en SEO Etsy et en e-commerce.\n\nOptimise cette fiche produit pour maximiser la visibilité dans les recherches Etsy :\n\nProduit : [description du produit]\n\nGénère :\n1. Un titre Etsy optimisé SEO (140 caractères max) avec les mots-clés principaux\n2. 13 tags Etsy ultra-pertinents\n3. Une description longue (500 mots) persuasive et SEO-friendly\n4. Les 5 mots-clés principaux à utiliser\n5. Le prix recommandé basé sur le marché'},
+  'business2': {tag:'💼 Business', title:'Créer un plan de lancement en 30 jours', text:'Tu es un consultant business expérimenté spécialisé dans le lancement de produits digitaux.\n\nCrée un plan de lancement détaillé sur 30 jours pour [produit/service] destiné à [audience cible].\n\nStructure le plan semaine par semaine avec :\n- Les actions prioritaires de chaque semaine\n- Les canaux de communication à utiliser\n- Les KPIs à atteindre\n- Les outils recommandés\n- Un budget estimé minimal\n\nObjectif : premières ventes avant la fin du mois.'},
+  'tiktok2': {tag:'🎵 TikTok', title:'Script complet pour vidéo TikTok de 60 secondes', text:'Tu es un créateur de contenu TikTok expert avec une audience de plus d\'1 million d\'abonnés.\n\nÉcris un script complet de 60 secondes pour une vidéo TikTok sur [sujet] dans la niche [niche].\n\nStructure :\n- Hook (0-3 sec) : phrase qui stoppe le scroll\n- Développement (4-45 sec) : valeur concrète, exemples, rythme soutenu\n- CTA (46-60 sec) : appel à l\'action clair et motivant\n\nInclus aussi : texte overlay, musique recommandée, 10 hashtags.'},
+  'email1': {tag:'✍️ Écriture', title:'Rédiger un email de vente persuasif', text:'Tu es un copywriter expert avec 10 ans d\'expérience en vente directe.\n\nRédige un email de vente persuasif pour [produit] à [prix] destiné à [audience].\n\nStructure AIDA :\n- Objet accrocheur (max 50 caractères)\n- Introduction : accroche sur une douleur forte\n- Développement : présenter la solution et ses bénéfices\n- Preuve sociale : témoignage ou résultat concret\n- CTA : appel à l\'action clair avec urgence\n\nLongueur : 250-350 mots. Ton : direct et humain.'}
+};
+
+function openPrompt(id) {
+  var data = promptsData[id];
+  if (!data) return;
+  document.getElementById('modalTag').textContent = data.tag;
+  document.getElementById('modalTitle').textContent = data.title;
+  document.getElementById('modalText').textContent = data.text;
+  document.getElementById('promptModal').classList.add('open');
+}
+function closePromptModal() {
+  document.getElementById('promptModal').classList.remove('open');
+}
+function copyModal() {
+  var text = document.getElementById('modalText').textContent;
+  navigator.clipboard.writeText(text).then(function() {
+    document.querySelector('.prompt-modal-copy').textContent = '✓ Copié avec succès !';
+    setTimeout(function() { document.querySelector('.prompt-modal-copy').textContent = '📋 Copier ce prompt'; closePromptModal(); }, 1500);
+  });
+}
+
+function filterPrompts(cat) {
+  document.querySelectorAll('.filter-chip').forEach(function(c) { c.classList.remove('active'); });
+  event.target.classList.add('active');
+  document.querySelectorAll('.prompt-item').forEach(function(item) {
+    if (cat === 'tous' || item.dataset.cat === cat) item.style.display = 'block';
+    else item.style.display = 'none';
+  });
+}
+
+// ===== EMAIL CAPTURE =====
+function handleEmail() {
+  var email = document.getElementById('emailCapture').value.trim();
+  if (!email || !email.includes('@')) { document.getElementById('emailCapture').focus(); return; }
+  document.querySelector('.email-form').innerHTML = '<div style="text-align:center;padding:16px"><div style="font-size:32px;margin-bottom:8px">🎉</div><div style="font-size:16px;font-weight:600;color:var(--green)">C\'est parti !</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Vérifie ta boîte mail — tes 10 prompts arrivent dans quelques minutes !</div></div>';
+}
+
+// ===== ENTER KEY =====
+document.getElementById('homeIdea').addEventListener('keydown', function(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); generateHome(); } });
+document.getElementById('genIdea').addEventListener('keydown', function(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); generatePrompt(); } });
+</script>
+</body>
+</html>
